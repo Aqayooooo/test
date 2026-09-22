@@ -7,7 +7,6 @@ html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moje Portfolio | O mnie</title>
     <style>
-        /* Reset i podstawowe style */
         * {
             margin: 0;
             padding: 0;
@@ -28,7 +27,6 @@ html
             padding: 40px 0;
         }
 
-        /* Nagłówek i sekcja O mnie */
         header {
             text-align: center;
             margin-bottom: 60px;
@@ -38,7 +36,7 @@ html
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            background-color: #38bdf8; /* Miejsce na Twoje zdjęcie */
+            background-color: #38bdf8;
             margin: 0 auto 20px;
             display: flex;
             align-items: center;
@@ -67,7 +65,6 @@ html
             margin: 0 auto;
         }
 
-        /* Wspólne style dla sekcji */
         section {
             margin-bottom: 60px;
         }
@@ -80,7 +77,6 @@ html
             margin-bottom: 25px;
         }
 
-        /* Sekcja Umiejętności (Skills) */
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
@@ -103,7 +99,6 @@ html
             transform: translateY(-2px);
         }
 
-        /* Sekcja Projekty (Projects) i Praktyki (Internships) */
         .card-list {
             display: flex;
             flex-direction: column;
@@ -159,7 +154,6 @@ html
             color: #64748b;
         }
 
-        /* Stopka */
         footer {
             text-align: center;
             margin-top: 80px;
@@ -178,7 +172,6 @@ html
             text-decoration: underline;
         }
 
-        /* Responsywność dla mniejszych ekranów */
         @media (max-width: 600px) {
             .card-header {
                 flex-direction: column;
@@ -194,101 +187,73 @@ html
 
     <div class="container">
         
-        <!-- NAGŁÓWEK / O MNIE -->
         <header>
-            <div class="profile-img">Twoje Zdjęcie</div>
-            <h1>Jan Kowalski</h1>
-            <p class="subtitle">Junior Frontend Developer / Student</p>
+            <div class="profile-img"></div>
+            <h1>Bartłomiej Łaczek</h1>
+            <p class="subtitle">Student @ Walery goetel </p>
             <p class="about-text">
-                Cześć! Jestem pasjonatem technologii webowych i projektowania UI/UX. Chętnie podejmuję nowe wyzwania, tworząc szybkie, nowoczesne i łatwo dostępne strony internetowe. Obecnie rozwijam swoje umiejętności w React oraz Node.js.
+                Cześć! Jestem pasjonatem technologii webowych i projektowania UI/UX. Chętnie podejmuję nowe wyzwania, tworząc szybkie, nowoczesne i łatwo dostępne strony internetowe. Obecnie rozwijam swoje umiejętności w javie, c++, c#.
+
             </p>
         </header>
 
-        <!-- UMIEJĘTNOŚCI -->
         <section id="skills">
             <h2>Umiejętności</h2>
             <div class="skills-grid">
-                <span class="skill-tag">HTML5 & CSS3</span>
-                <span class="skill-tag">JavaScript (ES6+)</span>
-                <span class="skill-tag">React.js</span>
-                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">HTML5 & CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">PHP</span>
                 <span class="skill-tag">Git & GitHub</span>
-                <span class="skill-tag">REST APIs</span>
-                <span class="skill-tag">UI/UX Design</span>
-                <span class="skill-tag">Figma</span>
             </div>
         </section>
 
-        <!-- PROJEKTY -->
         <section id="projects">
             <h2>Projekty</h2>
             <div class="card-list">
                 
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Aplikacja E-Commerce „ShopFlow”</h3>
+                        <h3 class="card-title">Strona internetowa o mnie</h3>
                         <span class="card-meta">Projekt Osobisty</span>
                     </div>
                     <p class="card-description">
-                        W pełni funkcjonalny sklep internetowy z koszykiem zakupowym, filtrowaniem produktów oraz panelem administratora do zarządzania asortymentem.
+                        W pełni funkcjonalny sklep internetowy z koszykiem zakupowym, filtrowaniem produktów oraz panelem administratora do zarządzania asortymentem.//przyklad
                     </p>
-                    <p class="card-tech"><strong>Technologie:</strong> React, Context API, Tailwind CSS, Firebase</p>
                 </div>
 
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Dashboard Analityczny</h3>
-                        <span class="card-meta">Projekt Akademicki</span>
-                    </div>
-                    <p class="card-description">
-                        Interaktywny panel prezentujący wykresy i statystyki dotyczące zużycia energii na podstawie zewnętrznego API.
-                    </p>
-                    <p class="card-tech"><strong>Technologie:</strong> JavaScript, Chart.js, Fetch API, Bootstrap</p>
-                </div>
+                
 
             </div>
         </section>
 
-        <!-- PRAKTYKI I STAŻE -->
         <section id="internships">
             <h2>Doświadczenie i Praktyki</h2>
             <div class="card-list">
                 
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Praktykant Frontend Developer</h3>
-                        <span class="card-meta">Lipiec 2026 – Wrzesień 2026</span>
+                        <h3 class="card-title">Praktykant Backend</h3>
+                        <span class="card-meta">Wrzesień 2025 – miesiac</span>
                     </div>
-                    <span class="card-company">TechSolutions Sp. z o.o.</span>
+                    <span class="card-company">Elektris sp. z o. o. sp. k.</span>
                     <p class="card-description">
-                        Współtworzyłem interfejs użytkownika nowego systemu CRM. Do moich zadań należało kodowanie komponentów UI na podstawie makiet z Figmy oraz optymalizacja czasu ładowania strony o 15%.
+                        Z powodzeniem przeprowadziłem migrację dotychczasowego workflow n8n do dedykowanej aplikacji backendowej napisanej w Pythonie. Celem projektu było usprawnienie procesów na linii produkcyjnej, co pozwoliło na zwiększenie wydajności, lepszą skalowalność systemu oraz skrócenie czasu przetwarzania danych.
                     </p>
-                    <p class="card-tech"><strong>Wykorzystane skille:</strong> React, Sass, BEM, Agile/Scrum</p>
+                    <p class="card-tech"><strong>Wykorzystane umieje4tnosci:</strong> Python, n8n</p>
                 </div>
 
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Stażysta ds. Wsparcia IT</h3>
-                        <span class="card-meta">Lipiec 2025</span>
-                    </div>
-                    <span class="card-company">Global Connect Inc.</span>
-                    <p class="card-description">
-                        Pomoc w konfiguracji sprzętu sieciowego, zarządzanie wewnętrzną bazą danych oraz automatyzacja powtarzalnych zadań biurowych za pomocą prostych skryptów.
-                    </p>
-                    <p class="card-tech"><strong>Wykorzystane skille:</strong> Python, SQL, Linux, Helpdesk</p>
-                </div>
+                
 
             </div>
         </section>
 
-        <!-- STOPKA -->
         <footer>
-            <p>&copy; 2026 Jan Kowalski. Strona stworzona z pasją. Skontaktuj się ze mną przez <a href="https://linkedin.com" target="_blank">LinkedIn</a>.</p>
+            <p>&copy; 2026 Bartłomiej Łaczek. Strona stworzona z pasją. Skontaktuj się ze mną przez </p>
         </footer>
 
     </div>
 
 </body>
 </html>
-
-Używaj kodu z rozwagą.
