@@ -2,11 +2,45 @@ html
 
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moje Portfolio | O mnie</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
+        .footer-section {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: #ffffff;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #ea4335;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .email-link:hover {
+            background-color: #ea4335;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(234, 67, 53, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .email-link i {
+            font-size: 16px;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -177,22 +211,25 @@ html
                 flex-direction: column;
                 gap: 5px;
             }
+
             .card-meta {
                 margin-top: 5px;
             }
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
-        
+
         <header>
             <div class="profile-img"></div>
             <h1>Bartłomiej Łaczek</h1>
             <p class="subtitle">Student @ Walery goetel </p>
             <p class="about-text">
-                Cześć! Jestem pasjonatem technologii webowych i projektowania UI/UX. Chętnie podejmuję nowe wyzwania, tworząc szybkie, nowoczesne i łatwo dostępne strony internetowe. 
+                Cześć! Jestem pasjonatem technologii webowych i projektowania UI/UX. Chętnie podejmuję nowe wyzwania,
+                tworząc szybkie, nowoczesne i łatwo dostępne strony internetowe.
 
             </p>
         </header>
@@ -209,7 +246,7 @@ html
             </div>
         </section>
         <section id="skills">
-            <h2>Obecnie rozwijam swoje umiejętności w:  </h2>
+            <h2>Obecnie rozwijam swoje umiejętności w: </h2>
             <div class="skills-grid">
                 <span class="skill-tag">Java</span>
                 <span class="skill-tag">C++</span>
@@ -221,18 +258,19 @@ html
         <section id="projects">
             <h2>Projekty</h2>
             <div class="card-list">
-                
+
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Strona internetowa o mnie</h3>
                         <span class="card-meta">Projekt Osobisty</span>
                     </div>
                     <p class="card-description">
-                        W pełni funkcjonalny sklep internetowy z koszykiem zakupowym, filtrowaniem produktów oraz panelem administratora do zarządzania asortymentem.//PRZYKŁAD\\
+                        W pełni funkcjonalny sklep internetowy z koszykiem zakupowym, filtrowaniem produktów oraz
+                        panelem administratora do zarządzania asortymentem.//PRZYKŁAD\\
                     </p>
                 </div>
 
-                
+
 
             </div>
         </section>
@@ -240,7 +278,7 @@ html
         <section id="internships">
             <h2>Doświadczenie i Praktyki</h2>
             <div class="card-list">
-                
+
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Praktykant Backend</h3>
@@ -248,21 +286,31 @@ html
                     </div>
                     <span class="card-company">Elektris sp. z o. o. sp. k.</span>
                     <p class="card-description">
-                        Z powodzeniem przeprowadziłem migrację dotychczasowego workflow n8n do dedykowanej aplikacji backendowej napisanej w Pythonie. Celem projektu było usprawnienie procesów na linii produkcyjnej, co pozwoliło na zwiększenie wydajności, lepszą skalowalność systemu oraz skrócenie czasu przetwarzania danych.
+                        Z powodzeniem przeprowadziłem migrację dotychczasowego workflow n8n do dedykowanej aplikacji
+                        backendowej napisanej w Pythonie. Celem projektu było usprawnienie procesów na linii
+                        produkcyjnej, co pozwoliło na zwiększenie wydajności, lepszą skalowalność systemu oraz skrócenie
+                        czasu przetwarzania danych.
                     </p>
                     <p class="card-tech"><strong>Wykorzystane umieje4tnosci:</strong> Python, n8n</p>
                 </div>
 
-                
+
 
             </div>
         </section>
 
-        <footer>
-            <p>&copy; 2026 Bartłomiej Łaczek. Strona stworzona z pasją. Skontaktuj się ze mną przez <a href="https://mail.google.com/mail/">bartlomiej.laczek7312@gmail.com</a> </p>
+        <footer class="footer-section">
+            <p>&copy; 2026. Strona stworzona z pasją.</p>
+            <p>
+                Skontaktuj się ze mną przez
+                <a href="mailto:bartlomiej.laczek7312@gmail.com" class="email-link" title="Napisz do mnie">
+                    <i class="fa-regular fa-envelope"></i> Napisz wiadomość
+                </a>
+            </p>
         </footer>
 
     </div>
 
 </body>
+
 </html>
