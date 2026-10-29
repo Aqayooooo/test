@@ -57,8 +57,7 @@ export function codeSketch() {
   return /* HTML */ `<figure class="code-figure" data-code-sketch data-reveal>
     <div class="paper">${codeWindow()}</div>
     <figcaption>
-      Ten kod steruje ogródkiem obok. Podlej roślinę, a kółko pokaże, które linie właśnie się
-      wykonały.
+      <code>app.js</code> — po podlaniu kółko pokazuje, które linie się wykonały.
     </figcaption>
   </figure>`;
 }
@@ -74,7 +73,6 @@ export const migrationSketch = /* HTML */ `<svg class="migration-sketch" viewBox
   </g>
   <text class="sk-big" x="95" y="152">n8n</text>
   <text class="sk-big sk-light" x="545" y="152">Python</text>
-  <text class="sk-hand" x="320" y="68" text-anchor="middle">ta sama logika, nowy kod</text>
   <text class="sk-small" x="95" y="196">workflow</text>
   <text class="sk-small" x="545" y="196">backend</text>
 </svg>`;

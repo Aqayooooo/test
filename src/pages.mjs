@@ -28,7 +28,7 @@ export const pages = [
             </p>
             <p>
               We wrześniu 2025 byłem na praktykach w Elektris, gdzie przenosiłem workflow z n8n do
-              aplikacji w Pythonie. Niżej są moje projekty — w dwa z nich możesz zagrać.
+              aplikacji w Pythonie.
             </p>
             <p class="intro-links">
               <a class="text-link" href="mailto:${email}">${email}</a>
@@ -60,7 +60,7 @@ export const pages = [
             <a href="projekty.html#ogrodek">
               <span class="work-kind">Minigra</span>
               <span class="work-name">Mały ogródek</span>
-              <span class="work-desc">Podlewasz roślinę, a ona rośnie etap po etapie.</span>
+              <span class="work-desc">Animacja rośliny sterowana w JS.</span>
               <span class="work-tech">HTML, CSS, JavaScript</span>
             </a>
           </li>
@@ -131,7 +131,7 @@ export const pages = [
     title: 'Projekty',
     description:
       'Projekty Bartłomieja Łaczka: portfolio, interaktywny Mały ogródek i Nocna zmiana — minigra w JavaScript.',
-    content: /* HTML */ `${pageHero('Projekty', 'To portfolio i dwie minigry w JavaScript. W obie możesz zagrać na tej stronie.')}
+    content: /* HTML */ `${pageHero('Projekty')}
       ${gameSection}
       <article class="project garden-project wrap" id="ogrodek" aria-labelledby="garden-title">
         <div class="project-meta">
@@ -179,22 +179,10 @@ export const pages = [
           ${tags(['HTML', 'CSS', 'JavaScript', 'Node'])}
         </div>
         <ul class="details">
-          <li>
-            <strong>Strony z jednego źródła.</strong> Treść jest w <code>src/pages.mjs</code>, a
-            skrypt <code>npm run build</code> składa z niej sześć plików HTML.
-          </li>
-          <li>
-            <strong>Bez przeładowania.</strong> Podstrony są pobierane przez <code>fetch</code> i
-            podmieniane w miejscu, a przyciski wstecz/dalej działają dzięki History API.
-          </li>
-          <li>
-            <strong>Testy.</strong> <code>npm run check</code> sprawdza linki, nagłówki i
-            unikalne identyfikatory na każdej stronie oraz logikę gry.
-          </li>
-          <li>
-            <strong>Rysunki w SVG.</strong> Szkic edytora na stronie głównej pokazuje prawdziwy kod
-            z <code>app.js</code>, a numery linii liczą się przy każdym buildzie.
-          </li>
+          <li>Treść stron jest w <code>src/pages.mjs</code>, <code>npm run build</code> robi z niej HTML.</li>
+          <li>Podstrony ładują się przez <code>fetch</code> bez przeładowania, wstecz/dalej przez History API.</li>
+          <li><code>npm run check</code> sprawdza linki, nagłówki, id i logikę gry.</li>
+          <li>Szkic kodu przy ogródku czyta <code>app.js</code> przy buildzie, więc numery linii się zgadzają.</li>
         </ul>
       </article>`,
   },
@@ -243,7 +231,7 @@ export const pages = [
     title: 'Umiejętności',
     description:
       'Technologie i obszary nauki Bartłomieja Łaczka: web, Python, PHP, C++, Git, n8n, Java i C#.',
-    content: /* HTML */ `${pageHero('Umiejętności', 'Osobno technologie, z których korzystam, i te, których się teraz uczę.')}
+    content: /* HTML */ `${pageHero('Umiejętności')}
       <section class="skills wrap" aria-label="Obszary umiejętności">
         <div class="skill">
           <h2>Frontend</h2>
@@ -272,7 +260,7 @@ export const pages = [
     key: 'contact',
     title: 'Kontakt',
     description: `Napisz do Bartłomieja Łaczka: ${email}. GitHub: Aqayooooo.`,
-    content: /* HTML */ `${pageHero('Kontakt', 'Masz pytanie o któryś projekt? Napisz maila.')}
+    content: /* HTML */ `${pageHero('Kontakt')}
       <section class="contact wrap">
         <a class="email-address" href="mailto:${email}"
           >bartlomiej.laczek7312<wbr />@gmail.com</a

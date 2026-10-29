@@ -21,7 +21,7 @@
           </button>
           <nav id="main-nav" class="main-nav" aria-label="Nawigacja główna"><a href="informacja.html">O mnie</a><a href="projekty.html" aria-current="page">Projekty</a><a href="doswiadczenie.html">Doświadczenie</a><a href="umiejetnosci.html">Umiejętności</a><a href="kontakt.html">Kontakt</a></nav>
         </header>
-        <main id="main" tabindex="-1"><header class="page-hero wrap"><h1>Projekty</h1><p>To portfolio i dwie minigry w JavaScript. W obie możesz zagrać na tej stronie.</p></header>
+        <main id="main" tabindex="-1"><header class="page-hero wrap"><h1>Projekty</h1></header>
        <article
   class="heist-project wrap"
   id="nocna-zmiana"
@@ -30,7 +30,7 @@
   <div class="heist-heading">
     <div>
       <h2 id="heist-title">Nocna zmiana</h2>
-      <p>Skradanka w Canvas. Wyłącz prąd, zbierz łupy i wróć do auta, zanim ktoś się obudzi.</p>
+      <p>Skradanka w Canvas. Wyłącz prąd, zbierz łupy i wróć do auta.</p>
     </div>
     <ul class="tags" aria-label="Technologie"><li>JavaScript</li><li>Canvas</li></ul>
   </div>
@@ -291,8 +291,7 @@
     <ellipse class="sk-marker" data-marker cx="140" cy="0" rx="80" ry="10" filter="url(#pencil)" />
   </svg></div>
     <figcaption>
-      Ten kod steruje ogródkiem obok. Podlej roślinę, a kółko pokaże, które linie właśnie się
-      wykonały.
+      <code>app.js</code> — po podlaniu kółko pokazuje, które linie się wykonały.
     </figcaption>
   </figure>
       </article>
@@ -303,22 +302,10 @@
           <ul class="tags" aria-label="Technologie"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Node</li></ul>
         </div>
         <ul class="details">
-          <li>
-            <strong>Strony z jednego źródła.</strong> Treść jest w <code>src/pages.mjs</code>, a
-            skrypt <code>npm run build</code> składa z niej sześć plików HTML.
-          </li>
-          <li>
-            <strong>Bez przeładowania.</strong> Podstrony są pobierane przez <code>fetch</code> i
-            podmieniane w miejscu, a przyciski wstecz/dalej działają dzięki History API.
-          </li>
-          <li>
-            <strong>Testy.</strong> <code>npm run check</code> sprawdza linki, nagłówki i
-            unikalne identyfikatory na każdej stronie oraz logikę gry.
-          </li>
-          <li>
-            <strong>Rysunki w SVG.</strong> Szkic edytora na stronie głównej pokazuje prawdziwy kod
-            z <code>app.js</code>, a numery linii liczą się przy każdym buildzie.
-          </li>
+          <li>Treść stron jest w <code>src/pages.mjs</code>, <code>npm run build</code> robi z niej HTML.</li>
+          <li>Podstrony ładują się przez <code>fetch</code> bez przeładowania, wstecz/dalej przez History API.</li>
+          <li><code>npm run check</code> sprawdza linki, nagłówki, id i logikę gry.</li>
+          <li>Szkic kodu przy ogródku czyta <code>app.js</code> przy buildzie, więc numery linii się zgadzają.</li>
         </ul>
       </article></main>
         <nav class="next-page wrap" aria-label="Kolejna strona"><span>Dalej</span><a href="doswiadczenie.html">Doświadczenie <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 16h21M18 8l8 8-8 8" stroke="currentColor" stroke-width="1.6"/></svg></a></nav>

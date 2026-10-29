@@ -55,7 +55,7 @@ export const gameSection = /* HTML */ ` <article
   <div class="heist-heading">
     <div>
       <h2 id="heist-title">Nocna zmiana</h2>
-      <p>Skradanka w Canvas. Wyłącz prąd, zbierz łupy i wróć do auta, zanim ktoś się obudzi.</p>
+      <p>Skradanka w Canvas. Wyłącz prąd, zbierz łupy i wróć do auta.</p>
     </div>
     <ul class="tags" aria-label="Technologie"><li>JavaScript</li><li>Canvas</li></ul>
   </div>
