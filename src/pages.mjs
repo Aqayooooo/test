@@ -1,6 +1,6 @@
 import { button, email } from './layout.mjs';
 import { gameSection } from './game-section.mjs';
-import { codeSketch, migrationSketch, cabinetSketch } from './sketch.mjs';
+import { codeSketch, migrationSketch } from './sketch.mjs';
 
 // tresc stron, po zmianach: npm run build
 const pageHero = (title, lead) =>
@@ -220,7 +220,17 @@ export const pages = [
           ${tags(['JavaScript', 'Three.js', 'WebGL', 'IndexedDB', 'node:test'])}
         </div>
         <aside class="now-side">
-          <figure class="now-figure paper">${cabinetSketch}</figure>
+          <figure class="shot">
+            <span class="shot-frame"
+              ><img
+                src="assets/meblownia-kuchnia.webp"
+                width="1600"
+                height="1000"
+                alt="Meblownia Studio: projekt kuchni L z wyspą w widoku 3D"
+                loading="lazy"
+            /></span>
+            <figcaption>Kuchnia L zrobiona w Meblowni</figcaption>
+          </figure>
           <dl class="facts compact">
             <div>
               <dt>Status</dt>

@@ -77,27 +77,3 @@ export const migrationSketch = /* HTML */ `<svg class="migration-sketch" viewBox
   <text class="sk-small" x="545" y="196">backend</text>
 </svg>`;
 
-// szafka z otwartymi drzwiami (do zakladki teraz)
-export const cabinetSketch = /* HTML */ `<svg class="cabinet-sketch" viewBox="0 0 340 320" role="img" aria-labelledby="cabinet-title">
-  <title id="cabinet-title">Szkic szafki z otwartymi drzwiami i wymiarami</title>
-  <defs>
-    <pattern id="side-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
-      <path d="M0 0V6" stroke="#22222559" stroke-width="1" />
-    </pattern>
-  </defs>
-  <g filter="url(#pencil)">
-    <path class="sk-face" d="M90 70L130 44H250L210 70Z" />
-    <path class="cab-side" fill="url(#side-hatch)" d="M210 70L250 44V218L210 244Z" />
-    <rect class="sk-face" x="90" y="70" width="120" height="174" />
-    <path class="sk-line" d="M96 128H204M96 186H204M90 232H210" />
-    <path class="sk-face cab-door" d="M90 70L46 92V266L90 244Z" />
-    <path class="sk-line" d="M54 168l4-2v14l-4 2z" />
-    <path class="sk-dash" d="M90 70C70 74 52 82 46 92" />
-  </g>
-  <g class="cab-dim">
-    <path d="M90 282H210M90 276v12M210 276v12" />
-    <path d="M276 44V218M270 44h12M270 218h12" />
-  </g>
-  <text class="sk-small" x="150" y="304">600</text>
-  <text class="sk-small" x="296" y="135">720</text>
-</svg>`;

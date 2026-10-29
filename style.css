@@ -31,14 +31,41 @@ html {
 }
 body {
   margin: 0;
+  /* stopka zawsze na dole */
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  /* papier milimetrowy: drobna kratka + co 5 kratek mocniejsza linia */
   background-color: var(--bg);
   background-image:
-    linear-gradient(#2222250a 1px, transparent 1px),
-    linear-gradient(90deg, #2222250a 1px, transparent 1px);
-  background-size: 28px 28px;
+    linear-gradient(#2c5a8c14 1px, transparent 1px),
+    linear-gradient(90deg, #2c5a8c14 1px, transparent 1px),
+    linear-gradient(#22222509 1px, transparent 1px),
+    linear-gradient(90deg, #22222509 1px, transparent 1px);
+  background-size:
+    140px 140px,
+    140px 140px,
+    28px 28px,
+    28px 28px;
+  background-position: -1px -1px;
   color: var(--ink);
   font: 400 16px/1.65 var(--sans);
   -webkit-font-smoothing: antialiased;
+}
+main {
+  flex: 1;
+}
+/* ziarno papieru */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  pointer-events: none;
+  opacity: 0.045;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 .defs {
   position: absolute;
@@ -1181,30 +1208,72 @@ code {
 .now-project .details li {
   padding: 10px 0;
 }
-.now-figure {
-  margin: 0 0 36px;
-  padding: 18px 22px 10px;
-  transform: rotate(0.8deg);
+.shot {
+  margin: 0 0 40px;
 }
-.cabinet-sketch {
+/* zdjecie przyklejone tasma, rozmyte do hovera */
+.shot-frame {
+  position: relative;
   display: block;
+  padding: 10px;
+  background: var(--sheet);
+  border: 1px solid #22222540;
+  box-shadow: 0 14px 30px -18px #22222580;
+  rotate: 1.2deg;
+  transition:
+    rotate 0.5s var(--ease),
+    scale 0.5s var(--ease),
+    box-shadow 0.5s var(--ease);
+}
+.shot-frame::before,
+.shot-frame::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  width: 74px;
+  height: 22px;
+  background: #e9e4d2c7;
+  box-shadow: 0 1px 2px #22222524;
+}
+.shot-frame::before {
+  top: -10px;
+  left: 18px;
+  rotate: -8deg;
+}
+.shot-frame::after {
+  top: -9px;
+  right: 22px;
+  rotate: 6deg;
+}
+.shot-frame > img {
+  display: block;
+  clip-path: inset(0);
   width: 100%;
   height: auto;
+  overflow: hidden;
+  filter: blur(5px) grayscale(0.7) contrast(0.9);
+  transition: filter 0.6s var(--ease);
 }
-.cab-side {
-  stroke: var(--ink);
-  stroke-width: 1.3;
+.shot-frame {
+  overflow: visible;
 }
-.cab-door {
-  fill: var(--sheet);
+.shot:hover .shot-frame {
+  rotate: 0deg;
+  scale: 1.06;
+  box-shadow: 0 26px 50px -24px #22222599;
 }
-.cab-dim path {
-  fill: none;
-  stroke: var(--blue);
-  stroke-width: 1;
+.shot:hover .shot-frame > img {
+  filter: none;
 }
-.cabinet-sketch .sk-small {
-  fill: var(--blue);
+.shot figcaption {
+  margin-top: 16px;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+@media (hover: none) {
+  .shot-frame > img {
+    filter: none;
+  }
 }
 @media (max-width: 980px) {
   .now-project {
