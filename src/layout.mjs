@@ -1,6 +1,7 @@
 export const navigation = [
   { file: 'informacja.html', key: 'about', title: 'O mnie' },
   { file: 'projekty.html', key: 'projects', title: 'Projekty' },
+  { file: 'teraz.html', key: 'now', title: 'Teraz' },
   { file: 'doswiadczenie.html', key: 'experience', title: 'Doświadczenie' },
   { file: 'umiejetnosci.html', key: 'skills', title: 'Umiejętności' },
   { file: 'kontakt.html', key: 'contact', title: 'Kontakt' },

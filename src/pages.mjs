@@ -1,6 +1,6 @@
 import { button, email } from './layout.mjs';
 import { gameSection } from './game-section.mjs';
-import { codeSketch, migrationSketch } from './sketch.mjs';
+import { codeSketch, migrationSketch, cabinetSketch } from './sketch.mjs';
 
 // tresc stron, po zmianach: npm run build
 const pageHero = (title, lead) =>
@@ -41,6 +41,14 @@ export const pages = [
         <h2 id="work-title" class="section-title">Projekty i doświadczenie</h2>
         <ul class="work-list">
           <li>
+            <a href="teraz.html">
+              <span class="work-kind">W trakcie</span>
+              <span class="work-name">Meblownia Studio</span>
+              <span class="work-desc">Projektowanie mebli i pomieszczeń w 3D, offline.</span>
+              <span class="work-tech">JavaScript, Three.js</span>
+            </a>
+          </li>
+          <li>
             <a href="doswiadczenie.html">
               <span class="work-kind">Praktyki · wrzesień 2025</span>
               <span class="work-name">Elektris</span>
@@ -75,9 +83,9 @@ export const pages = [
         </ul>
       </section>
       <section class="now wrap" aria-labelledby="now-title">
-        <h2 id="now-title" class="section-title">Teraz</h2>
+        <h2 id="now-title" class="section-title">Uczę się</h2>
         <p>
-          Uczę się Javy, C++ i C#, a do szybszego składania stron Bootstrapa. Chcę zajmować się
+          Javy, C++ i C#, a do szybszego składania stron Bootstrapa. Chcę zajmować się
           full-stackiem i aplikacjami mobilnymi.
         </p>
       </section>`,
@@ -184,6 +192,54 @@ export const pages = [
           <li><code>npm run check</code> sprawdza linki, nagłówki, id i logikę gry.</li>
           <li>Szkic kodu przy ogródku czyta <code>app.js</code> przy buildzie, więc numery linii się zgadzają.</li>
         </ul>
+      </article>`,
+  },
+  {
+    file: 'teraz.html',
+    key: 'now',
+    title: 'Nad czym pracuję',
+    description:
+      'Nad czym teraz pracuje Bartłomiej Łaczek: Meblownia Studio — lokalna aplikacja do projektowania mebli i pomieszczeń w 3D.',
+    content: /* HTML */ `${pageHero('Nad czym pracuję')}
+      <article class="now-project wrap" aria-labelledby="meblownia-title">
+        <div class="prose">
+          <h2 id="meblownia-title">Meblownia Studio</h2>
+          <p class="lead">
+            Aplikacja w przeglądarce do projektowania mebli z płyt i całych pomieszczeń w 3D. Działa
+            lokalnie — bez internetu i konta, projekt zapisuje się w przeglądarce albo do pliku.
+          </p>
+          <h3>Co już działa</h3>
+          <ul class="details">
+            <li>konstrukcja mebla z płyt: fronty, szuflady, okucia</li>
+            <li>ciągi kuchenne ze wspólnym blatem i cokołem</li>
+            <li>kolizje, też tor otwierania drzwi</li>
+            <li>obróbka płyt: rowki, wręgi, kieszenie, wycięcia z punktów</li>
+            <li>rozkrój, lista zakupów i rysunki warsztatowe (eksport do ZIP)</li>
+            <li>pomiary powierzchni i odległości w 3D</li>
+          </ul>
+          ${tags(['JavaScript', 'Three.js', 'WebGL', 'IndexedDB', 'node:test'])}
+        </div>
+        <aside class="now-side">
+          <figure class="now-figure paper">${cabinetSketch}</figure>
+          <dl class="facts compact">
+            <div>
+              <dt>Status</dt>
+              <dd>w trakcie, wersja 3.46</dd>
+            </div>
+            <div>
+              <dt>Od</dt>
+              <dd>październik 2026</dd>
+            </div>
+            <div>
+              <dt>Testy</dt>
+              <dd>71 plików (node:test + jsdom)</dd>
+            </div>
+            <div>
+              <dt>Repo</dt>
+              <dd>prywatne</dd>
+            </div>
+          </dl>
+        </aside>
       </article>`,
   },
   {

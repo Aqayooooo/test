@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+    <html lang="pl">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#f4f3ef" />
+        <meta name="description" content="Nad czym teraz pracuje Bartłomiej Łaczek: Meblownia Studio — lokalna aplikacja do projektowania mebli i pomieszczeń w 3D." />
+        <title>Nad czym pracuję — Bartłomiej Łaczek</title>
+        <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+        <link rel="stylesheet" href="style.css" />
+
+        <script src="app.js" defer></script>
+      </head>
+      <body data-page="now">
+        <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false"><filter id="pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="2"/></filter><filter id="graphite" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.5 0.08" numOctaves="3" seed="2" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="4"/></filter></svg>
+        <a class="skip-link" href="#main">Przejdź do treści</a>
+        <header class="site-header">
+          <a class="brand" href="index.html">Bartłomiej Łaczek</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+            Menu
+          </button>
+          <nav id="main-nav" class="main-nav" aria-label="Nawigacja główna"><a href="informacja.html">O mnie</a><a href="projekty.html">Projekty</a><a href="teraz.html" aria-current="page">Teraz</a><a href="doswiadczenie.html">Doświadczenie</a><a href="umiejetnosci.html">Umiejętności</a><a href="kontakt.html">Kontakt</a></nav>
+        </header>
+        <main id="main" tabindex="-1"><header class="page-hero wrap"><h1>Nad czym pracuję</h1></header>
+      <article class="now-project wrap" aria-labelledby="meblownia-title">
+        <div class="prose">
+          <h2 id="meblownia-title">Meblownia Studio</h2>
+          <p class="lead">
+            Aplikacja w przeglądarce do projektowania mebli z płyt i całych pomieszczeń w 3D. Działa
+            lokalnie — bez internetu i konta, projekt zapisuje się w przeglądarce albo do pliku.
+          </p>
+          <h3>Co już działa</h3>
+          <ul class="details">
+            <li>konstrukcja mebla z płyt: fronty, szuflady, okucia</li>
+            <li>ciągi kuchenne ze wspólnym blatem i cokołem</li>
+            <li>kolizje, też tor otwierania drzwi</li>
+            <li>obróbka płyt: rowki, wręgi, kieszenie, wycięcia z punktów</li>
+            <li>rozkrój, lista zakupów i rysunki warsztatowe (eksport do ZIP)</li>
+            <li>pomiary powierzchni i odległości w 3D</li>
+          </ul>
+          <ul class="tags" aria-label="Technologie"><li>JavaScript</li><li>Three.js</li><li>WebGL</li><li>IndexedDB</li><li>node:test</li></ul>
+        </div>
+        <aside class="now-side">
+          <figure class="now-figure paper"><svg class="cabinet-sketch" viewBox="0 0 340 320" role="img" aria-labelledby="cabinet-title">
+  <title id="cabinet-title">Szkic szafki z otwartymi drzwiami i wymiarami</title>
+  <defs>
+    <pattern id="side-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <path d="M0 0V6" stroke="#22222559" stroke-width="1" />
+    </pattern>
+  </defs>
+  <g filter="url(#pencil)">
+    <path class="sk-face" d="M90 70L130 44H250L210 70Z" />
+    <path class="cab-side" fill="url(#side-hatch)" d="M210 70L250 44V218L210 244Z" />
+    <rect class="sk-face" x="90" y="70" width="120" height="174" />
+    <path class="sk-line" d="M96 128H204M96 186H204M90 232H210" />
+    <path class="sk-face cab-door" d="M90 70L46 92V266L90 244Z" />
+    <path class="sk-line" d="M54 168l4-2v14l-4 2z" />
+    <path class="sk-dash" d="M90 70C70 74 52 82 46 92" />
+  </g>
+  <g class="cab-dim">
+    <path d="M90 282H210M90 276v12M210 276v12" />
+    <path d="M276 44V218M270 44h12M270 218h12" />
+  </g>
+  <text class="sk-small" x="150" y="304">600</text>
+  <text class="sk-small" x="296" y="135">720</text>
+</svg></figure>
+          <dl class="facts compact">
+            <div>
+              <dt>Status</dt>
+              <dd>w trakcie, wersja 3.46</dd>
+            </div>
+            <div>
+              <dt>Od</dt>
+              <dd>październik 2026</dd>
+            </div>
+            <div>
+              <dt>Testy</dt>
+              <dd>71 plików (node:test + jsdom)</dd>
+            </div>
+            <div>
+              <dt>Repo</dt>
+              <dd>prywatne</dd>
+            </div>
+          </dl>
+        </aside>
+      </article></main>
+        <nav class="next-page wrap" aria-label="Kolejna strona"><span>Dalej</span><a href="doswiadczenie.html">Doświadczenie <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 16h21M18 8l8 8-8 8" stroke="currentColor" stroke-width="1.6"/></svg></a></nav>
+        <footer class="site-footer wrap">
+          <span>Bartłomiej Łaczek, 2026</span>
+          <a href="mailto:bartlomiej.laczek7312@gmail.com">E-mail</a>
+          <a href="https://github.com/Aqayooooo" target="_blank" rel="noopener noreferrer"
+            >GitHub</a
+          ><a class="back-top" href="#main">Do góry ↑</a>
+        </footer>
+        <div class="page-curtain" aria-hidden="true">
+          <svg class="scribble-canvas" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="scribble" d="M-25 -6 L125 -4 L-25 9 L125 14 L-25 27 L125 32 L-25 45 L125 50 L-25 63 L125 68 L-25 81 L125 86 L-25 99 L125 104 L-25 117" pathLength="1" filter="url(#graphite)" />
+          </svg>
+          <span class="curtain-title"></span>
+        </div>
+        <div class="announcement sr-only" role="status" aria-live="polite"></div>
+      </body>
+    </html>
