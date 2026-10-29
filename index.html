@@ -1,51 +1,106 @@
 <!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#171817">
-    <meta name="description" content="Portfolio Bartłomieja Łaczka — poznaj mnie, moje umiejętności, projekty i doświadczenie.">
-    <title>O mnie — Ba2rtłomiej Łaczek</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <a class="skip-link" href="#main">Przejdź do treści</a>
-    <header class="topbar"><div class="topbar-inner wrap">
-        <a class="wordmark" href="index.html"><span>BŁ</span> / portfolio</a>
-        <nav aria-label="Nawigacja główna"><ul>
-            <li><a href="index.html" aria-current="page">O mnie</a></li>
-            <li><a href="umiejetnosci.html">Umiejętności</a></li>
-            <li><a href="projekty.html">Projekty</a></li>
-            <li><a href="doswiadczenie.html">Doświadczenie</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul></nav>
-    </div></header>
-    <main id="main" class="wrap">
-        <section class="hero"><div class="hero-grid">
-            <div><span class="overline">Portfolio</span>
-                <h1>Cześć, jestem<br><span>Bartłomiej Łaczek.</span></h1>
-                <p class="hero-copy">Jestem uczniem Zespołu Szkół im. Walerego Goetla. 
-                    Interesuję się technologiami webowymi i projektowaniem UI/UX. 
-                    Rozwijam się w kierunku full-stack i tworzenia aplikacji mobilnych.</p>
-            </div>
-            <aside class="hero-aside" aria-label="Informacje o mnie">
-                <p><strong>Szkoła</strong>Zespół Szkół im. Walerego Goetla</p>
-                <p><strong>Rozwijam się w kierunku</strong>Full-stack · aplikacje mobilne</p>
-            </aside>
-        </div></section>
-        <section class="content-section" aria-labelledby="explore-title">
-            <div class="section-label"><span class="section-number">01</span><h2 id="explore-title">Poznaj bliżej</h2></div>
-            <div class="section-body">
-                <p class="section-lead">Zajrzyj do wybranych części mojego portfolio.</p>
-                <div class="link-grid">
-                    <a class="page-link" href="umiejetnosci.html"><small>01 / UMIEJĘTNOŚCI</small><strong>Technologie, których używam</strong><span>Moje obszary nauki i pracy →</span></a>
-                    <a class="page-link" href="projekty.html"><small>02 / PROJEKTY</small><strong>Rzeczy, które tworzę</strong><span>Przykład projektu osobistego →</span></a>
-                    <a class="page-link" href="doswiadczenie.html"><small>03 / DOŚWIADCZENIE</small><strong>Praktyka w backendzie</strong><span>Projekt realizowany w Elektris →</span></a>
-                    <a class="page-link" href="kontakt.html"><small>04 / KONTAKT</small><strong>Porozmawiajmy</strong><span>Napisz do mnie wiadomość →</span></a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="wrap"><p>© 2026 Bartłomiej Łaczek</p><p><a href="kontakt.html">Kontakt</a></p></footer>
-</body>
-</html>
+    <html lang="pl">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#f4f3ef" />
+        <meta name="description" content="Portfolio Bartłomieja Łaczka: strony internetowe, Python, praktyki w Elektris i minigry w JavaScript." />
+        <title>Bartłomiej Łaczek</title>
+        <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preload" as="image" href="assets/sketch-hero.webp" fetchpriority="high" />
+        <script src="app.js" defer></script>
+      </head>
+      <body data-page="home">
+        <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false"><filter id="pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="2"/></filter><filter id="graphite" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.5 0.08" numOctaves="3" seed="2" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="4"/></filter></svg>
+        <a class="skip-link" href="#main">Przejdź do treści</a>
+        <header class="site-header">
+          <a class="brand" href="index.html">Bartłomiej Łaczek</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+            Menu
+          </button>
+          <nav id="main-nav" class="main-nav" aria-label="Nawigacja główna"><a href="informacja.html">O mnie</a><a href="projekty.html">Projekty</a><a href="doswiadczenie.html">Doświadczenie</a><a href="umiejetnosci.html">Umiejętności</a><a href="kontakt.html">Kontakt</a></nav>
+        </header>
+        <main id="main" tabindex="-1"><section class="intro" aria-labelledby="home-title">
+        <div class="intro-art" aria-hidden="true">
+          <img src="assets/sketch-hero.webp" width="1774" height="887" alt="" fetchpriority="high" />
+        </div>
+        <div class="intro-grid wrap">
+          <div class="intro-text">
+            <h1 id="home-title">Bartłomiej Łaczek</h1>
+            <p class="lead">
+              Uczę się w Zespole Szkół im. Walerego Goetla. Robię strony internetowe, piszę backend w
+              Pythonie i uczę się projektować interfejsy.
+            </p>
+            <p>
+              We wrześniu 2025 byłem na praktykach w Elektris, gdzie przenosiłem workflow z n8n do
+              aplikacji w Pythonie. Niżej są moje projekty — w dwa z nich możesz zagrać.
+            </p>
+            <p class="intro-links">
+              <a class="text-link" href="mailto:bartlomiej.laczek7312@gmail.com">bartlomiej.laczek7312@gmail.com</a>
+              <a class="text-link" href="https://github.com/Aqayooooo" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="work wrap" aria-labelledby="work-title">
+        <h2 id="work-title" class="section-title">Projekty i doświadczenie</h2>
+        <ul class="work-list">
+          <li>
+            <a href="doswiadczenie.html">
+              <span class="work-kind">Praktyki · wrzesień 2025</span>
+              <span class="work-name">Elektris</span>
+              <span class="work-desc">Migracja workflow z n8n do aplikacji backendowej.</span>
+              <span class="work-tech">Python, n8n</span>
+            </a>
+          </li>
+          <li>
+            <a href="projekty.html#nocna-zmiana">
+              <span class="work-kind">Gra</span>
+              <span class="work-name">Nocna zmiana</span>
+              <span class="work-desc">Skradanka w Canvas: wyłącz prąd, zbierz łupy, nie daj się złapać.</span>
+              <span class="work-tech">JavaScript, Canvas</span>
+            </a>
+          </li>
+          <li>
+            <a href="projekty.html#ogrodek">
+              <span class="work-kind">Minigra</span>
+              <span class="work-name">Mały ogródek</span>
+              <span class="work-desc">Podlewasz roślinę, a ona rośnie etap po etapie.</span>
+              <span class="work-tech">HTML, CSS, JavaScript</span>
+            </a>
+          </li>
+          <li>
+            <a href="projekty.html#portfolio">
+              <span class="work-kind">Strona</span>
+              <span class="work-name">To portfolio</span>
+              <span class="work-desc">Bez frameworka, z własnym skryptem do budowania stron.</span>
+              <span class="work-tech">HTML, CSS, JavaScript, Node</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="now wrap" aria-labelledby="now-title">
+        <h2 id="now-title" class="section-title">Teraz</h2>
+        <p>
+          Uczę się Javy, C++ i C#, a do szybszego składania stron Bootstrapa. Chcę zajmować się
+          full-stackiem i aplikacjami mobilnymi.
+        </p>
+      </section></main>
+
+        <footer class="site-footer wrap">
+          <span>Bartłomiej Łaczek, 2026</span>
+          <a href="mailto:bartlomiej.laczek7312@gmail.com">E-mail</a>
+          <a href="https://github.com/Aqayooooo" target="_blank" rel="noopener noreferrer"
+            >GitHub</a
+          ><a class="back-top" href="#main">Do góry ↑</a>
+        </footer>
+        <div class="page-curtain" aria-hidden="true">
+          <svg class="scribble-canvas" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="scribble" d="M-25 -6 L125 -4 L-25 9 L125 14 L-25 27 L125 32 L-25 45 L125 50 L-25 63 L125 68 L-25 81 L125 86 L-25 99 L125 104 L-25 117" pathLength="1" filter="url(#graphite)" />
+          </svg>
+          <span class="curtain-title"></span>
+        </div>
+        <div class="announcement sr-only" role="status" aria-live="polite"></div>
+      </body>
+    </html>

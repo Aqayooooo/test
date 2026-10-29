@@ -1,114 +1,340 @@
 <!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#171817"><meta name="description" content="Wybrane projekty Bartłomieja Łaczka.">
-    <title>Projekty — Bartłomiej Łaczek</title><link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <a class="skip-link" href="#main">Przejdź do treści</a>
-    <header class="topbar"><div class="topbar-inner wrap">
-        <a class="wordmark" href="index.html"><span>BŁ</span> / portfolio</a>
-        <nav aria-label="Nawigacja główna"><ul>
-            <li><a href="index.html">O mnie</a></li><li><a href="umiejetnosci.html">Umiejętności</a></li>
-            <li><a href="projekty.html" aria-current="page">Projekty</a></li><li><a href="doswiadczenie.html">Doświadczenie</a></li><li><a href="kontakt.html">Kontakt</a></li>
-        </ul></nav>
-    </div></header>
-    <main id="main" class="wrap">
-        <header class="page-hero"><span class="overline">02 / Wybrane prace</span><h1>Projekty<span>.</span></h1><p>Pracuję nad rzeczami, które pozwalają mi ćwiczyć projektowanie i tworzenie stron. Poniżej znajdziesz mój projekt osobisty.</p></header>
-        <section class="content-section" aria-labelledby="projects-title">
-            <div class="section-label"><span class="section-number">01</span><h2 id="projects-title">Osobiste</h2></div>
-            <div class="section-body">
-                <p class="section-lead">To portfolio jest jednym z moich projektów — miejscem, w którym zbieram informacje o sobie, swoich umiejętnościach i doświadczeniu.</p>
-                <article class="project-row"><span class="project-index">01</span><div><h2>Portfolio osobiste</h2><p>Strona o mnie, moich umiejętnościach i doświadczeniu.</p></div><span class="project-tech">HTML · CSS</span></article>
-                <article class="mini-project" aria-labelledby="garden-title">
-                    <div class="mini-project-copy">
-                        <p class="mini-project-label">Mini projekt · interaktywny</p>
-                        <h3 id="garden-title">Mały ogródek</h3>
-                        <p>Obudź nasionko, podlewaj je i obserwuj, jak z ziemi wyrasta mały kwiatek.</p>
-                        <div class="garden-progress">
-                            <div class="garden-progress-label"><span>Wzrost kwiatka</span><span id="growth-count">0 / 4</span></div>
-                            <progress id="growth-progress" max="4" value="0" aria-label="Postęp wzrostu kwiatka">0 z 4</progress>
-                        </div>
-                        <button class="water-button" id="water-flower" type="button" aria-describedby="plant-status">Podlej nasionko <span aria-hidden="true">💧</span></button>
-                        <span class="mini-project-tech">HTML · CSS · JavaScript</span>
-                    </div>
-                    <div class="mini-project-scene" aria-hidden="true">
-                        <span class="mini-project-sun">☀</span>
-                        <span class="mini-project-cloud">☁</span>
-                        <div class="garden-plant" id="garden-plant" data-stage="0">
-                            <span class="plant-seed"></span>
-                            <span class="plant-stem"></span>
-                            <span class="plant-leaf plant-leaf-left"></span>
-                            <span class="plant-leaf plant-leaf-right"></span>
-                            <span class="plant-bud">
-                                <svg viewBox="0 0 40 48" aria-hidden="true" focusable="false">
-                                    <defs>
-                                        <linearGradient id="tulip-bud" x1="0" y1="0" x2="1" y2="1">
-                                            <stop offset="0" stop-color="#ffd6bd" />
-                                            <stop offset=".52" stop-color="#ed9990" />
-                                            <stop offset="1" stop-color="#c96f72" />
-                                        </linearGradient>
-                                    </defs>
-                                    <path d="M20 45 C16 41 10 42 5 36 C12 35 17 38 20 42 C23 38 28 35 35 36 C30 42 24 41 20 45Z" fill="#71834d" />
-                                    <path d="M20 42 C12 39 8 32 8 24 C8 15 13 7 19 3 C22 11 22 20 21 27 C21 33 21 38 20 42Z" fill="url(#tulip-bud)" stroke="#c96f72" stroke-width=".8" />
-                                    <path d="M20 42 C22 34 20 25 22 17 C23 10 27 5 31 3 C37 11 39 20 36 29 C34 37 27 41 20 42Z" fill="url(#tulip-bud)" stroke="#c96f72" stroke-width=".8" />
-                                    <path d="M20 39 C19 30 18 16 20 5 C23 15 24 29 21 39Z" fill="#f4b0a1" opacity=".9" />
-                                    <path d="M20 8 C21 17 22 29 20 38" fill="none" stroke="#bf676b" stroke-width="1" stroke-linecap="round" />
-                                </svg>
-                            </span>
-                            <span class="plant-bloom">
-                                <span class="plant-petal plant-petal-top"></span>
-                                <span class="plant-petal plant-petal-left"></span>
-                                <span class="plant-petal plant-petal-right"></span>
-                                <span class="plant-petal plant-petal-bottom-left"></span>
-                                <span class="plant-petal plant-petal-bottom-right"></span>
-                                <span class="plant-flower-center"></span>
-                            </span>
-                        </div>
-                    </div>
-                    <p class="plant-status" id="plant-status" aria-live="polite">Nasionko śpi pod ziemią. Podlej je, żeby wykiełkowało.</p>
-                </article>
+    <html lang="pl">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#f4f3ef" />
+        <meta name="description" content="Projekty Bartłomieja Łaczka: portfolio, interaktywny Mały ogródek i Nocna zmiana — minigra w JavaScript." />
+        <title>Projekty — Bartłomiej Łaczek</title>
+        <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+        <link rel="stylesheet" href="style.css" />
+
+        <script src="app.js" defer></script>
+      </head>
+      <body data-page="projects">
+        <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false"><filter id="pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="2"/></filter><filter id="graphite" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.5 0.08" numOctaves="3" seed="2" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="4"/></filter></svg>
+        <a class="skip-link" href="#main">Przejdź do treści</a>
+        <header class="site-header">
+          <a class="brand" href="index.html">Bartłomiej Łaczek</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+            Menu
+          </button>
+          <nav id="main-nav" class="main-nav" aria-label="Nawigacja główna"><a href="informacja.html">O mnie</a><a href="projekty.html" aria-current="page">Projekty</a><a href="doswiadczenie.html">Doświadczenie</a><a href="umiejetnosci.html">Umiejętności</a><a href="kontakt.html">Kontakt</a></nav>
+        </header>
+        <main id="main" tabindex="-1"><header class="page-hero wrap"><h1>Projekty</h1><p>To portfolio i dwie minigry w JavaScript. W obie możesz zagrać na tej stronie.</p></header>
+       <article
+  class="heist-project wrap"
+  id="nocna-zmiana"
+  aria-labelledby="heist-title"
+>
+  <div class="heist-heading">
+    <div>
+      <h2 id="heist-title">Nocna zmiana</h2>
+      <p>Skradanka w Canvas. Wyłącz prąd, zbierz łupy i wróć do auta, zanim ktoś się obudzi.</p>
+    </div>
+    <ul class="tags" aria-label="Technologie"><li>JavaScript</li><li>Canvas</li></ul>
+  </div>
+  <div class="heist-game" data-heist>
+    <div class="heist-toolbar">
+      <span class="heist-wordmark"
+        ><span aria-hidden="true">☾</span> NOCTURNE <small>CAT BURGLAR</small></span
+      >
+      <div class="heist-metrics">
+        <span>TORBA <b data-bag>0 / 3</b></span>
+        <span>W AUCIE <b data-saved>0 / 12</b></span>
+      </div>
+      <button
+        class="heist-expand"
+        type="button"
+        data-expand
+        aria-label="Powiększ grę"
+        aria-expanded="false"
+        title="Powiększ grę"
+      >
+        ⤢
+      </button>
+      <button
+        class="heist-pause"
+        type="button"
+        data-pause
+        aria-label="Wstrzymaj grę"
+        title="Pauza"
+        disabled
+      >
+        Ⅱ
+      </button>
+    </div>
+    <div class="heist-mission">
+      <span><span data-objective>NAJPIERW</span> <b data-goal>PRĄD W PIWNICY</b></span>
+      <progress
+        max="6"
+        value="0"
+        data-mission-progress
+        aria-label="Skarby zabezpieczone do ukończenia misji"
+      ></progress>
+      <span data-mission-state>Najpierw wyłącz prąd w piwnicy</span>
+    </div>
+    <div class="heist-tools">
+      <span class="heist-noise"
+        >HAŁAS <progress max="1" value="0" data-noise aria-label="Głośność kota"></progress
+      ></span>
+      <span data-key>BRAK KLUCZA</span>
+      <span data-power>KAMERY ON</span>
+      <span data-heat>DOM ŚPI</span>
+    </div>
+    <div
+      class="heist-stage"
+      tabindex="0"
+      role="group"
+      aria-label="Gra Nocna zmiana. Wciśnij przycisk startu, następnie steruj klawiszami W A S D i spacją."
+      aria-describedby="heist-controls"
+    >
+      <canvas
+        class="heist-canvas"
+        width="960"
+        height="540"
+        role="img"
+        aria-label="Nocny dom z otwartymi drzwiami, półkami, piwnicą i dostawczakiem po lewej."
+      ></canvas>
+      <div class="heist-scene-hud" aria-hidden="true">
+        <span class="heist-location" data-location>PRZED DOMEM</span>
+        <span class="heist-watch" data-watch>DOMOWNIK ŚPI</span>
+      </div>
+      <div class="heist-overlay" data-overlay>
+        <div class="heist-brief" data-brief>
+          <span class="eyebrow">NIE BUDŹ DOMOWNIKÓW</span>
+          <h3>Wchodzisz po cichu.<br /><em>Wychodzisz ze skarbem.</em></h3>
+          <ul class="heist-tasks">
+            <li>Najpierw bezpiecznik w piwnicy: przepisz tekst z min. 50 WPM.</li>
+            <li>Kamery zgasną na 30 s. Zabezpiecz 6 z 12 łupów, po trzy w torbie.</li>
+            <li>Skradaj się i chowaj pod S. Klucz w bibliotece otwiera sejf.</li>
+          </ul>
+          <button class="pill-button heist-start" type="button" data-start disabled>
+            <span class="button-icon"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 16h21M18 8l8 8-8 8" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            <span class="button-text">Wczytywanie gry…</span>
+          </button>
+          <span class="heist-brief-note"
+            >Przytrzymaj W — wyższy skok. Shift / S + ruch — skradanie.</span
+          >
+        </div>
+         <section
+  class="heist-typing"
+  data-typing
+  hidden
+  aria-labelledby="breaker-title"
+>
+  <div class="heist-typing-heading">
+    <span class="eyebrow">BEZPIECZNIK / RĘCZNE OBEJŚCIE</span>
+    <span class="heist-typing-threshold">MIN. 50 WPM</span>
+  </div>
+  <h3 id="breaker-title">Zostaw dom <em>w ciemności.</em></h3>
+  <p class="heist-typing-help" id="breaker-help">
+    Przepisz cały tekst. Bez polskich znaków, minimum 50 WPM. Czas rusza z pierwszą literą. Dom
+    poczeka.
+  </p>
+  <div class="heist-typing-stats" aria-label="Wynik pisania">
+    <span><b data-typing-wpm>0</b> WPM</span>
+    <span><b data-typing-accuracy>100</b>% trafności</span>
+    <span><b data-typing-time>0.0</b> s</span>
+  </div>
+  <div class="heist-typing-text" data-typing-text aria-label="Tekst do przepisania"></div>
+  <label class="sr-only" for="breaker-input">Przepisz tekst, aby wyłączyć prąd</label>
+  <input
+    id="breaker-input"
+    data-typing-input
+    type="text"
+    autocomplete="off"
+    autocapitalize="off"
+    autocorrect="off"
+    spellcheck="false"
+    aria-describedby="breaker-help breaker-feedback"
+    placeholder="Zacznij pisać tutaj…"
+    enterkeyhint="done"
+  />
+  <p class="heist-typing-feedback" id="breaker-feedback" data-typing-feedback role="status">
+    Błędy poprawiaj Backspace. Wklejanie jest wyłączone.
+  </p>
+  <div class="heist-typing-actions">
+    <button class="pill-button" data-typing-retry type="button" hidden>
+      <span class="button-icon"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 16h21M18 8l8 8-8 8" stroke="currentColor" stroke-width="1.6"/></svg></span><span class="button-text">Jeszcze jedna próba</span>
+    </button>
+    <button class="heist-typing-cancel" data-typing-cancel type="button">
+      Wróć do domu <span>Esc</span>
+    </button>
+  </div>
+</section>
+        <div class="heist-result" data-result hidden>
+          <span class="eyebrow" data-result-kicker></span>
+          <h3 data-result-title></h3>
+          <p data-result-copy></p>
+          <dl class="heist-summary" data-summary hidden>
+            <div>
+              <dt>W aucie</dt>
+              <dd data-result-loot></dd>
             </div>
-        </section>
-        <section class="content-section" aria-labelledby="more-title">
-            <div class="section-label"><span class="section-number">02</span><h2 id="more-title">Praktyka</h2></div>
-            <div class="section-body"><p class="section-lead">Doświadczenie zdobywałem również podczas miesięcznych praktyk backendowych w Elektris. Opis zadania i użytych narzędzi znajdziesz na osobnej stronie.</p><a href="doswiadczenie.html">Przejdź do doświadczenia →</a></div>
-        </section>
-    </main>
-    <footer class="wrap"><p>© 2026 Bartłomiej Łaczek</p><p><a href="kontakt.html">Kontakt</a></p></footer>
-    <script>
-        const flowerStages = [
-            { message: "Nasionko śpi pod ziemią. Podlej je, żeby wykiełkowało." },
-            { message: "Nasionko pęka... spod ziemi wychyla się mały kiełek!" },
-            { message: "Kiełek rośnie i wypuszcza pierwsze listki." },
-            { message: "Pojawił się pączek. Jeszcze chwilka i zakwitnie!" },
-            { message: "Rozkwitł! Udało Ci się wyhodować mały kwiatek. 🌼" }
-        ];
-
-        const waterButton = document.querySelector("#water-flower");
-        const gardenPlant = document.querySelector("#garden-plant");
-        const plantStatus = document.querySelector("#plant-status");
-        const growthProgress = document.querySelector("#growth-progress");
-        const growthCount = document.querySelector("#growth-count");
-        let flowerStage = 0;
-
-        waterButton.addEventListener("click", () => {
-            if (flowerStage === flowerStages.length - 1) {
-                flowerStage = 0;
-                waterButton.innerHTML = 'Podlej nasionko <span aria-hidden="true">💧</span>';
-            } else {
-                flowerStage += 1;
-                if (flowerStage === flowerStages.length - 1) {
-                    waterButton.innerHTML = 'Zacznij od nowa <span aria-hidden="true">↻</span>';
-                }
-            }
-
-            gardenPlant.dataset.stage = flowerStage;
-            plantStatus.textContent = flowerStages[flowerStage].message;
-            growthProgress.value = flowerStage;
-            growthCount.textContent = `${flowerStage} / ${flowerStages.length - 1}`;
-        });
-    </script>
-</body>
-</html>
+            <div>
+              <dt>Czas</dt>
+              <dd data-result-time></dd>
+            </div>
+            <div>
+              <dt>Styl</dt>
+              <dd data-result-style></dd>
+            </div>
+          </dl>
+          <button class="pill-button" type="button" data-result-action>
+            <span class="button-icon"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 16h21M18 8l8 8-8 8" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            <span class="button-text" data-result-label>Spróbuj ponownie</span>
+          </button>
+        </div>
+      </div>
+      <div class="heist-suspicion" hidden data-alarm>
+        <span>KTOŚ CIĘ WIDZI</span>
+        <progress max="1" value="0" aria-label="Poziom wykrycia"></progress>
+      </div>
+      <div class="heist-arrival" data-cinematic hidden>Ostatni kurs tej nocy.</div>
+      <div class="heist-safe-opening" data-safe-opening hidden>
+        <span>OTWIERASZ SEJF · TRZYMAJ SPACJĘ</span>
+        <progress
+          max="1"
+          value="0"
+          data-safe-progress
+          aria-label="Postęp otwierania sejfu"
+        ></progress>
+      </div>
+    </div>
+    <div class="heist-context">
+      <span class="heist-status-dot" aria-hidden="true"></span>
+      <span data-prompt>Wciśnij Graj, aby rozpocząć.</span>
+      <button type="button" class="heist-exit" data-exit hidden>Odjedź z łupem ↗</button>
+    </div>
+    <div class="heist-controls" id="heist-controls">
+      <span><kbd>A</kbd><kbd>D</kbd> ruch</span>
+      <span><kbd>W</kbd> skok / drabina</span>
+      <span><kbd>S</kbd> schowaj / zejdź</span>
+      <span><kbd>SHIFT</kbd> skradaj się</span>
+      <span><kbd>SPACJA</kbd> zabierz / użyj</span>
+      <span><kbd>ESC</kbd> pauza</span>
+    </div>
+    <div class="heist-touch" aria-label="Sterowanie dotykowe">
+      <div>
+        <button type="button" data-control="left" aria-label="Idź w lewo">←</button>
+        <button type="button" data-control="right" aria-label="Idź w prawo">→</button>
+      </div>
+      <div>
+        <button type="button" data-control="down" aria-label="Ukryj się lub zejdź po drabinie">
+          S
+        </button>
+        <button type="button" data-control="up" aria-label="Skocz lub wejdź po drabinie">↑</button>
+        <button type="button" data-control="action" aria-label="Zabierz przedmiot lub odłóż łupy">
+          ✦
+        </button>
+      </div>
+    </div>
+    <p class="heist-live sr-only" role="status" aria-live="polite" data-game-live></p>
+    <noscript
+      ><p class="heist-noscript">
+        Do gry potrzebny jest JavaScript. Pozostałe projekty możesz przeglądać bez niego.
+      </p></noscript
+    >
+  </div>
+  <p class="heist-footnote">
+    <span>CANVAS / JAVASCRIPT</span><span>Łupy liczą się dopiero po odłożeniu do auta.</span>
+  </p>
+</article>
+      <article class="project garden-project wrap" id="ogrodek" aria-labelledby="garden-title">
+        <div class="project-meta">
+          <h2 id="garden-title">Mały ogródek</h2>
+          <p>
+            Kliknij konewkę, żeby podlać roślinę. Kiełek, liście, pąk i kwiat to kolejne stany
+            animacji sterowanej w JavaScript.
+          </p>
+          <ul class="tags" aria-label="Technologie"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        </div>
+        <div class="garden-demo paper">
+          <div class="garden-scene" aria-hidden="true">
+            <span class="garden-moon"></span><span class="garden-horizon"></span>
+            <div class="garden-plant" data-stage="0">
+              <span class="seed"></span><span class="stem"></span
+              ><span class="leaf leaf-left"></span><span class="leaf leaf-right"></span
+              ><span class="flower"><i></i><i></i><i></i><i></i><i></i><b></b></span>
+            </div>
+            <span class="garden-ground"></span
+            ><span class="garden-drops"><i></i><i></i><i></i></span>
+          </div>
+          <div class="garden-controls">
+            <progress id="growth-progress" max="4" value="0" aria-label="Postęp wzrostu kwiatu">
+              0 z 4
+            </progress>
+            <p id="plant-status" aria-live="polite">Nasionko czeka na wodę.</p>
+            <button class="garden-water" id="water-flower" type="button">
+              <span>Podlej nasionko</span
+              ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M12 3c-2 4-6 8-6 12a6 6 0 0 0 12 0c0-4-4-8-6-12Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <figure class="code-figure" data-code-sketch data-reveal>
+    <div class="paper"><svg class="code-sketch" viewBox="0 0 470 432" aria-hidden="true">
+    <defs><clipPath id="code-clip"><rect x="6" y="36" width="458" height="390" /></clipPath></defs>
+    <g class="sk-frame" filter="url(#pencil)">
+      <rect class="sk-face" x="6" y="6" width="458" height="420" rx="4" pathLength="1" />
+      <path class="sk-line" d="M6 36H464M50 36V426" pathLength="1" />
+      <circle class="sk-line" cx="22" cy="21" r="4.5" pathLength="1" /><circle class="sk-line" cx="37" cy="21" r="4.5" pathLength="1" /><circle class="sk-line" cx="52" cy="21" r="4.5" pathLength="1" />
+    </g>
+    <text class="sk-tab" x="235" y="25">app.js</text>
+    <g clip-path="url(#code-clip)"><text class="sk-num" x="42" y="64">111</text><text class="sk-code" x="62" y="64" style="--i:0">function initializeGarden() {</text><text class="sk-num" x="42" y="82">112</text><text class="sk-code" x="75.2" y="82" style="--i:1">const water = document.querySelector('#water-flower');</text><text class="sk-num" x="42" y="100">113</text><text class="sk-code" x="75.2" y="100" style="--i:2">if (!water) return;</text><text class="sk-num" x="42" y="118">114</text><text class="sk-code" x="75.2" y="118" style="--i:3">let stage = 0;</text><text class="sk-num" x="42" y="136">115</text><text class="sk-code" x="75.2" y="136" style="--i:4">let wateringTimer;</text><text class="sk-num" x="42" y="154">116</text><text class="sk-code" x="75.2" y="154" style="--i:5">const messages = [</text><text class="sk-num" x="42" y="172">117</text><text class="sk-code" x="88.4" y="172" style="--i:6">'Nasionko czeka na wodę.',</text><text class="sk-num" x="42" y="190">118</text><text class="sk-code" x="88.4" y="190" style="--i:7">'Jest kiełek. Podlej jeszcze raz.',</text><text class="sk-num" x="42" y="208">119</text><text class="sk-code" x="88.4" y="208" style="--i:8">'Wyrosły liście. Jeszcze trochę wody.',</text><text class="sk-num" x="42" y="226">120</text><text class="sk-code" x="88.4" y="226" style="--i:9">'Pąk jest gotowy. Podlej ostatni raz.',</text><text class="sk-num" x="42" y="244">121</text><text class="sk-code" x="88.4" y="244" style="--i:10">'Kwiat zakwitł. Możesz zacząć od nowa.',</text><text class="sk-num" x="42" y="262">122</text><text class="sk-code" x="75.2" y="262" style="--i:11">];</text><text class="sk-num" x="42" y="280">123</text><text class="sk-code" x="75.2" y="280" style="--i:12">water.addEventListener('click', () =&gt; {</text><text class="sk-num" x="42" y="298">124</text><text class="sk-code" x="88.4" y="298" style="--i:13" data-run="0">stage = (stage + 1) % 5;</text><text class="sk-num" x="42" y="316">125</text><text class="sk-code" x="88.4" y="316" style="--i:14" data-run="1">document.querySelector('.garden-plant').dataset.stage = stage;</text><text class="sk-num" x="42" y="334">126</text><text class="sk-code" x="88.4" y="334" style="--i:15">document.querySelector('#growth-progress').value = stage;</text><text class="sk-num" x="42" y="352">127</text><text class="sk-code" x="88.4" y="352" style="--i:16">document.querySelector('#growth-progress').textContent = messages[stage];</text><text class="sk-num" x="42" y="370">128</text><text class="sk-code" x="88.4" y="370" style="--i:17" data-run="2">document.querySelector('#plant-status').textContent = messages[stage];</text><text class="sk-num" x="42" y="388">129</text><text class="sk-code" x="88.4" y="388" style="--i:18" data-run="3">water.querySelector('span').textContent =</text><text class="sk-num" x="42" y="406">130</text><text class="sk-code" x="101.6" y="406" style="--i:19">stage === 4 ? 'Zacznij od nowa' : stage === 0 ? 'Podlej nasionko' : 'Podlej roślinę';</text></g>
+    <ellipse class="sk-marker" data-marker cx="140" cy="0" rx="80" ry="10" filter="url(#pencil)" />
+  </svg></div>
+    <figcaption>
+      Ten kod steruje ogródkiem obok. Podlej roślinę, a kółko pokaże, które linie właśnie się
+      wykonały.
+    </figcaption>
+  </figure>
+      </article>
+      <article class="project wrap" id="portfolio" aria-labelledby="portfolio-title">
+        <div class="project-meta">
+          <h2 id="portfolio-title">To portfolio</h2>
+          <p>Napisane w HTML, CSS i JavaScript, bez frameworka.</p>
+          <ul class="tags" aria-label="Technologie"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Node</li></ul>
+        </div>
+        <ul class="details">
+          <li>
+            <strong>Strony z jednego źródła.</strong> Treść jest w <code>src/pages.mjs</code>, a
+            skrypt <code>npm run build</code> składa z niej sześć plików HTML.
+          </li>
+          <li>
+            <strong>Bez przeładowania.</strong> Podstrony są pobierane przez <code>fetch</code> i
+            podmieniane w miejscu, a przyciski wstecz/dalej działają dzięki History API.
+          </li>
+          <li>
+            <strong>Testy.</strong> <code>npm run check</code> sprawdza linki, nagłówki i
+            unikalne identyfikatory na każdej stronie oraz logikę gry.
+          </li>
+          <li>
+            <strong>Rysunki w SVG.</strong> Szkic edytora na stronie głównej pokazuje prawdziwy kod
+            z <code>app.js</code>, a numery linii liczą się przy każdym buildzie.
+          </li>
+        </ul>
+      </article></main>
+        <nav class="next-page wrap" aria-label="Kolejna strona"><span>Dalej</span><a href="doswiadczenie.html">Doświadczenie <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 16h21M18 8l8 8-8 8" stroke="currentColor" stroke-width="1.6"/></svg></a></nav>
+        <footer class="site-footer wrap">
+          <span>Bartłomiej Łaczek, 2026</span>
+          <a href="mailto:bartlomiej.laczek7312@gmail.com">E-mail</a>
+          <a href="https://github.com/Aqayooooo" target="_blank" rel="noopener noreferrer"
+            >GitHub</a
+          ><a class="back-top" href="#main">Do góry ↑</a>
+        </footer>
+        <div class="page-curtain" aria-hidden="true">
+          <svg class="scribble-canvas" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="scribble" d="M-25 -6 L125 -4 L-25 9 L125 14 L-25 27 L125 32 L-25 45 L125 50 L-25 63 L125 68 L-25 81 L125 86 L-25 99 L125 104 L-25 117" pathLength="1" filter="url(#graphite)" />
+          </svg>
+          <span class="curtain-title"></span>
+        </div>
+        <div class="announcement sr-only" role="status" aria-live="polite"></div>
+      </body>
+    </html>

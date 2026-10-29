@@ -1,0 +1,1058 @@
+/* nocna zmiana */
+.heist-project {
+  padding-block: 55px 72px;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 30px;
+}
+.heist-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+.heist-heading .eyebrow {
+  font-size: 8px;
+}
+.heist-heading h2 {
+  margin: 15px 0 0;
+  font-size: clamp(44px, 5vw, 70px);
+}
+.heist-heading > p {
+  margin: 0 0 4px;
+  max-width: 380px;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.heist-game {
+  border: 1px solid #a28d614f;
+  background: #152321;
+  overflow: hidden;
+  position: relative;
+}
+.heist-typing {
+  width: min(100%, 640px);
+  color: #e8dfc8;
+  text-align: left;
+}
+.heist-typing-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+}
+.heist-typing-heading .eyebrow {
+  font-size: inherit;
+}
+.heist-typing-threshold {
+  flex-shrink: 0;
+  color: #d2bd83;
+  border: 1px solid #baa27166;
+  border-radius: 20px;
+  padding: 5px 9px;
+}
+.heist-typing h3 {
+  font: 500 clamp(24px, 3vw, 38px)/1.1 var(--serif);
+  margin: 10px 0;
+  letter-spacing: -0.035em;
+}
+.heist-typing-help {
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+  color: #bac1ad;
+}
+.heist-typing-stats {
+  display: flex;
+  gap: 25px;
+  align-items: baseline;
+  color: #b3b9a5;
+  font-size: 9px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #baa2713d;
+}
+.heist-typing-stats b {
+  color: #d2bd83;
+  font: 500 20px/1.2 var(--serif);
+  font-variant-numeric: tabular-nums;
+}
+.heist-typing-text {
+  font:
+    400 clamp(14px, 1.6vw, 19px)/1.6 Consolas,
+    'Courier New',
+    monospace;
+  color: #909b89;
+  margin: 12px 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  cursor: text;
+}
+.heist-typing-text .is-correct {
+  color: #f0e8d4;
+}
+.heist-typing-text .is-wrong {
+  color: #f19983;
+  background: #bc504133;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.heist-typing-text .is-current {
+  position: relative;
+}
+.heist-typing-text .is-current::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  border-left: 2px solid #d2bd83;
+}
+.heist-typing input {
+  display: block;
+  width: 100%;
+  min-height: 38px;
+  border: 1px solid #baa27166;
+  border-radius: 3px;
+  background: #101b18bf;
+  padding: 7px 12px;
+  color: #e8dfc8;
+  font:
+    16px/1.4 Consolas,
+    'Courier New',
+    monospace;
+  caret-color: #d2bd83;
+}
+.heist-typing input::placeholder {
+  color: #909b89;
+  font-size: 12px;
+}
+.heist-typing input:focus-visible {
+  outline: 1px solid #d2bd83;
+  outline-offset: 2px;
+}
+.heist-typing-feedback {
+  margin: 9px 0 12px;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #b3b9a5;
+}
+.heist-typing[data-phase='failed'] .heist-typing-feedback {
+  color: #f19983;
+}
+.heist-typing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: center;
+}
+.heist-typing-actions .pill-button {
+  min-height: 40px;
+  background: #192823c9;
+}
+.heist-typing-actions .button-icon {
+  width: 40px;
+}
+.heist-typing-actions .button-text {
+  font-size: 8px;
+  padding-right: 16px;
+}
+.heist-typing-cancel {
+  background: none;
+  border: none;
+  padding: 8px 0;
+  color: #c9cbb6;
+  font: inherit;
+  font-size: 10px;
+}
+.heist-typing-cancel span {
+  margin-left: 8px;
+  color: #919d89;
+}
+@media (max-width: 600px) {
+  .heist-typing-heading {
+    font-size: 6px;
+    gap: 6px;
+  }
+  .heist-typing-help,
+  .heist-typing-feedback {
+    font-size: 9px;
+  }
+  .heist-typing-stats {
+    gap: 15px;
+    font-size: 8px;
+  }
+  .heist-typing-text {
+    margin-block: 10px;
+  }
+}
+.heist-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  min-height: 66px;
+  padding: 14px 25px;
+  border-bottom: 1px solid #a28d6133;
+  background: #1b2823;
+}
+.heist-wordmark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font: 500 12px var(--serif);
+  letter-spacing: 0.23em;
+  color: var(--paper);
+}
+.heist-wordmark > span {
+  font-size: 24px;
+  color: var(--gold);
+}
+.heist-wordmark small {
+  font: 500 7px var(--sans);
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  padding-left: 10px;
+  border-left: 1px solid var(--line);
+}
+.heist-metrics {
+  margin-left: auto;
+  display: flex;
+  gap: 28px;
+  font-size: 7px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.heist-metrics b {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--paper);
+  margin-left: 9px;
+  letter-spacing: 0.03em;
+}
+.heist-pause {
+  height: 30px;
+  width: 30px;
+  display: grid;
+  place-items: center;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 13px;
+}
+.heist-pause:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.heist-pause:hover:not(:disabled) {
+  border-color: var(--gold);
+}
+.heist-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 20/9;
+  overflow: hidden;
+  isolation: isolate;
+  outline-offset: -3px !important;
+}
+.heist-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition:
+    filter 0.4s,
+    opacity 0.4s;
+}
+.heist-game:not([data-mode='playing']):not([data-mode='arriving']):not([data-mode='leaving'])
+  .heist-canvas {
+  filter: blur(5px);
+  opacity: 0.62;
+}
+.heist-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #10201fba, #10201f6e);
+}
+.heist-brief,
+.heist-result {
+  max-width: 600px;
+  text-align: center;
+}
+.heist-brief .eyebrow,
+.heist-result .eyebrow {
+  justify-content: center;
+  font-size: 8px;
+  letter-spacing: 0.24em;
+}
+.heist-brief h3,
+.heist-result h3 {
+  font: 500 clamp(28px, 3.2vw, 46px)/1.06 var(--serif);
+  margin: 10px 0 14px;
+  letter-spacing: -0.025em;
+}
+.heist-tasks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0;
+  margin: 0 0 18px;
+  color: #d2d2b9;
+  font-size: 10px;
+  line-height: 1.75;
+}
+.heist-tasks li::before {
+  content: '✦';
+  color: var(--red);
+  font-size: 8px;
+  margin-right: 10px;
+}
+.heist-game .heist-start,
+.heist-result .pill-button {
+  background: #192823c9;
+  min-height: 52px;
+  min-width: 235px;
+}
+.heist-start .button-icon,
+.heist-result .button-icon {
+  width: 52px;
+}
+.heist-start:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+.heist-start .button-text,
+.heist-result .button-text {
+  font-size: 9px;
+}
+.heist-brief-note {
+  display: block;
+  margin-top: 17px;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.heist-result > p {
+  font-size: 12px;
+  max-width: 440px;
+  margin: 0 auto 25px;
+}
+.heist-game[data-mode='caught'] .heist-overlay {
+  background: #0e1a1dd9;
+}
+.heist-game[data-mode='caught'] .heist-result h3 {
+  font-family: var(--sans);
+  font-weight: 800;
+  letter-spacing: -0.07em;
+  color: #d36b54;
+  font-size: clamp(48px, 8vw, 100px);
+  transform: rotate(-3deg);
+}
+.heist-game[data-mode='complete'] .heist-result h3 {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: #d2bd83;
+  font-size: clamp(32px, 5.7vw, 70px);
+}
+.heist-context {
+  min-height: 57px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 25px;
+  border-top: 1px solid #a28d6133;
+  background: #1b2823;
+  color: #d1c9ae;
+  font-size: 11px;
+}
+.heist-status-dot {
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+.heist-game[data-mode='playing'] .heist-status-dot {
+  background: #8ba17a;
+}
+.heist-exit {
+  margin-left: auto;
+  white-space: nowrap;
+  border: 1px solid var(--gold);
+  border-radius: 22px;
+  background: #9e8d5733;
+  padding: 7px 13px;
+  color: var(--paper);
+  font-size: 9px;
+}
+.heist-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 17px 25px;
+  background: #17211e;
+  color: var(--muted);
+  font-size: 9px;
+}
+.heist-controls > span {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.heist-controls kbd {
+  font: 500 8px var(--sans);
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+  padding: 3px 5px;
+  border: 1px solid #a28d6140;
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  color: #d5cfb7;
+  background: #26312a;
+}
+.heist-footnote {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 15px;
+  margin: 0;
+  font-size: 8px;
+  color: var(--muted);
+}
+.heist-footnote > span:first-child {
+  letter-spacing: 0.12em;
+  color: var(--gold);
+}
+.heist-suspicion {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  width: 180px;
+  padding: 10px 15px;
+  background: #19221fe8;
+  border: 1px solid #b8534277;
+  z-index: 2;
+  text-align: center;
+}
+.heist-suspicion > span {
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  color: #e1a08a;
+}
+.heist-suspicion progress {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: 7px;
+  border: none;
+  appearance: none;
+  background: #604538;
+}
+.heist-suspicion progress::-webkit-progress-bar {
+  background: #604538;
+}
+.heist-suspicion progress::-webkit-progress-value {
+  background: #d27556;
+}
+.heist-suspicion progress::-moz-progress-bar {
+  background: #d27556;
+}
+.heist-arrival {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font: italic 24px var(--serif);
+  color: var(--paper);
+  text-shadow: 0 1px 12px #071210;
+  pointer-events: none;
+}
+.heist-touch {
+  display: none;
+  padding: 10px 18px 15px;
+  justify-content: space-between;
+  gap: 10px;
+  background: #17211e;
+}
+.heist-touch > div {
+  display: flex;
+  gap: 8px;
+}
+.heist-touch button {
+  width: 43px;
+  height: 42px;
+  border: 1px solid #a28d6166;
+  border-radius: 8px;
+  background: #26332b;
+  color: var(--paper);
+  font-size: 18px;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.heist-touch button:active {
+  background: #6e5038;
+}
+.heist-touch [data-control='action'] {
+  color: var(--gold);
+  width: 55px;
+}
+.heist-noscript {
+  font-size: 12px;
+  padding: 15px 25px;
+}
+@media (hover: none), (pointer: coarse) {
+  .heist-touch {
+    display: flex;
+  }
+}
+@media (max-width: 800px) {
+  .heist-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .heist-heading > p {
+    font-size: 11px;
+  }
+  .heist-toolbar {
+    padding: 12px 17px;
+    gap: 12px;
+  }
+  .heist-wordmark small {
+    display: none;
+  }
+  .heist-metrics {
+    gap: 13px;
+  }
+  .heist-controls {
+    gap: 12px;
+    padding: 15px 17px;
+  }
+  .heist-context {
+    padding: 12px 17px;
+    font-size: 10px;
+  }
+  .heist-brief h3 {
+    font-size: 37px;
+    margin-bottom: 15px;
+  }
+  .heist-tasks {
+    font-size: 10px;
+    gap: 2px;
+    margin-bottom: 18px;
+  }
+  .heist-brief-note {
+    margin-top: 12px;
+    font-size: 7px;
+  }
+}
+@media (max-width: 600px) {
+  .heist-project {
+    padding-block: 40px 45px;
+  }
+  .heist-heading h2 {
+    font-size: 46px;
+  }
+  .heist-game {
+    margin-inline: -10px;
+  }
+  .heist-toolbar {
+    min-height: 55px;
+    padding: 10px 12px;
+  }
+  .heist-wordmark {
+    font-size: 10px;
+    gap: 5px;
+    letter-spacing: 0.1em;
+  }
+  .heist-wordmark > span {
+    font-size: 18px;
+  }
+  .heist-metrics {
+    gap: 10px;
+    font-size: 6px;
+  }
+  .heist-metrics b {
+    display: block;
+    margin: 3px 0 0;
+    font-size: 9px;
+  }
+  .heist-pause {
+    width: 27px;
+    height: 27px;
+  }
+  .heist-stage {
+    aspect-ratio: 1;
+  }
+  .heist-canvas {
+    object-fit: cover;
+  }
+  .heist-overlay {
+    padding: 18px 10px;
+  }
+  .heist-brief h3 {
+    font-size: 28px;
+    margin: 10px 0 12px;
+  }
+  .heist-brief .eyebrow {
+    font-size: 6px;
+  }
+  .heist-tasks {
+    font-size: 8px;
+    gap: 4px;
+    max-width: 260px;
+    margin: 0 auto 16px;
+  }
+  .heist-tasks li::before {
+    margin-right: 5px;
+  }
+  .heist-brief-note {
+    font-size: 6px;
+    margin-top: 12px;
+  }
+  .heist-game .heist-start,
+  .heist-result .pill-button {
+    min-height: 45px;
+    min-width: 205px;
+  }
+  .heist-start .button-icon,
+  .heist-result .button-icon {
+    width: 45px;
+  }
+  .heist-start .button-text,
+  .heist-result .button-text {
+    font-size: 8px;
+  }
+  .heist-context {
+    min-height: 60px;
+    padding: 10px 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 9px;
+  }
+  .heist-context [data-prompt] {
+    flex: 1;
+    min-width: 180px;
+  }
+  .heist-exit {
+    margin-left: 13px;
+    font-size: 8px;
+  }
+  .heist-controls {
+    padding: 12px;
+    gap: 9px;
+    font-size: 7px;
+  }
+  .heist-controls kbd {
+    font-size: 7px;
+    min-width: 16px;
+    padding: 2px 3px;
+  }
+  .heist-footnote {
+    font-size: 7px;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .heist-touch {
+    display: flex;
+    padding-inline: 12px;
+  }
+  .heist-touch button {
+    width: 39px;
+    height: 40px;
+  }
+  .heist-touch [data-control='action'] {
+    width: 44px;
+  }
+  .heist-result h3 {
+    font-size: 32px;
+  }
+  .heist-result > p {
+    font-size: 10px;
+    margin-bottom: 18px;
+  }
+  .heist-result .eyebrow {
+    font-size: 7px;
+  }
+  .heist-arrival {
+    font-size: 18px;
+    bottom: 20px;
+  }
+  .heist-suspicion {
+    bottom: 15px;
+    width: 150px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .heist-canvas {
+    transition: none;
+  }
+  .heist-game[data-mode='caught'] .heist-result h3 {
+    transform: none;
+  }
+}
+
+/* widok gry */
+.heist-expand {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--paper);
+  font-size: 22px;
+  line-height: 1;
+}
+.heist-expand:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.heist-pause {
+  flex-shrink: 0;
+}
+.heist-mission {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 36px;
+  padding: 9px 25px;
+  border-bottom: 1px solid #a28d6129;
+  background: #17241f;
+  color: #9eaa91;
+  font-size: 8px;
+  letter-spacing: 0.09em;
+}
+.heist-mission b {
+  font-weight: 500;
+  color: #d3c29a;
+  margin-left: 5px;
+}
+.heist-mission progress {
+  width: 104px;
+  height: 3px;
+  border: 0;
+  appearance: none;
+  background: #a28d6129;
+}
+.heist-mission progress::-webkit-progress-bar {
+  background: #a28d6129;
+}
+.heist-mission progress::-webkit-progress-value {
+  background: #c4ac75;
+  transition: width 0.35s;
+}
+.heist-mission progress::-moz-progress-bar {
+  background: #c4ac75;
+}
+.mission-ready .heist-mission b,
+.mission-ready [data-mission-state] {
+  color: #b1c89a;
+}
+.heist-mission > span:last-child {
+  margin-left: auto;
+  text-align: right;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.heist-scene-hud {
+  position: absolute;
+  inset: 17px 18px auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+  pointer-events: none;
+  font-size: 8px;
+  letter-spacing: 0.13em;
+}
+.heist-scene-hud > span {
+  padding: 5px 10px;
+  border: 1px solid #a28d613b;
+  background: #14231ee8;
+  color: #bdc4a4;
+}
+.heist-watch::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #9bb486;
+  vertical-align: middle;
+}
+[data-alert='seen'] .heist-watch {
+  color: #e1a08c;
+  border-color: #b8534280;
+}
+[data-alert='seen'] .heist-watch::before {
+  background: #d6775d;
+}
+[data-alert='hidden'] .heist-watch {
+  color: #c0d4a7;
+  border-color: #91a77780;
+}
+.heist-game:not([data-mode='playing']) .heist-scene-hud {
+  display: none;
+}
+.heist-overlay {
+  overflow-y: auto;
+  align-items: safe center;
+}
+.heist-summary {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin: 5px auto 24px;
+  max-width: 350px;
+}
+.heist-summary > div {
+  flex: 1;
+  padding: 0 20px;
+  border-right: 1px solid #a28d6140;
+}
+.heist-summary > div:last-child {
+  border-right: 0;
+}
+.heist-summary dt {
+  margin-bottom: 5px;
+  font-size: 7px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #9eaa91;
+}
+.heist-summary dd {
+  margin: 0;
+  font: 500 13px var(--sans);
+  color: #ded4b6;
+  white-space: nowrap;
+}
+.heist-game.is-expanded {
+  position: fixed;
+  z-index: 120;
+  inset: 18px;
+  margin: auto;
+  width: min(1440px, calc(100vw - 36px));
+  height: calc(100dvh - 36px);
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 0 0 100vmax #0b1313f2,
+    0 20px 100px #0008;
+}
+.is-expanded > .heist-stage {
+  flex: 1;
+  min-height: 0;
+  aspect-ratio: auto;
+}
+.is-expanded > :not(.heist-stage) {
+  flex-shrink: 0;
+}
+.is-expanded .heist-result h3 {
+  font-size: clamp(32px, 6vw, 80px);
+}
+@media (max-width: 800px) {
+  .heist-toolbar {
+    gap: 10px;
+  }
+  .heist-mission {
+    padding-inline: 17px;
+    gap: 12px;
+    font-size: 7px;
+  }
+  .heist-mission > span:last-child {
+    max-width: 190px;
+  }
+}
+@media (min-width: 601px) and (max-width: 800px) {
+  .heist-game:not(.is-expanded) .heist-overlay {
+    padding: 18px;
+  }
+  .heist-game:not(.is-expanded) .heist-brief h3 {
+    font-size: 32px;
+    margin: 10px 0 12px;
+  }
+  .heist-game:not(.is-expanded) .heist-tasks {
+    font-size: 9px;
+    margin-bottom: 14px;
+  }
+  .heist-game:not(.is-expanded) .heist-brief-note {
+    margin-top: 10px;
+    font-size: 7px;
+  }
+}
+@media (max-width: 600px) {
+  .heist-expand {
+    width: 27px;
+    height: 27px;
+    font-size: 20px;
+  }
+  .heist-toolbar {
+    gap: 7px;
+  }
+  .heist-mission {
+    padding: 8px 12px;
+    min-height: 32px;
+  }
+  .heist-mission > span:last-child {
+    display: none;
+  }
+  .heist-mission progress {
+    flex: 1;
+    width: auto;
+    max-width: 120px;
+    margin-left: auto;
+  }
+  .heist-scene-hud {
+    inset: 12px 12px auto;
+    font-size: 6px;
+    letter-spacing: 0.08em;
+    gap: 6px;
+  }
+  .heist-scene-hud > span {
+    padding: 5px 7px;
+  }
+  .heist-watch::before {
+    margin-right: 5px;
+  }
+  .heist-summary {
+    margin-bottom: 18px;
+  }
+  .heist-summary > div {
+    padding-inline: 12px;
+  }
+  .heist-summary dt {
+    font-size: 6px;
+  }
+  .heist-summary dd {
+    font-size: 10px;
+  }
+  .heist-game.is-expanded {
+    inset: 8px;
+    width: calc(100vw - 16px);
+    height: calc(100dvh - 16px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .heist-mission progress::-webkit-progress-value {
+    transition: none;
+  }
+}
+@media (max-width: 360px) {
+  .heist-touch {
+    padding-inline: 8px;
+    gap: 6px;
+  }
+  .heist-touch > div {
+    gap: 5px;
+  }
+}
+
+.heist-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 22px;
+  min-height: 31px;
+  padding: 8px 25px;
+  border-bottom: 1px solid #a28d6129;
+  background: #16211e;
+  color: #9da990;
+  font-size: 7px;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+}
+.heist-noise {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.heist-noise progress {
+  width: 48px;
+  height: 3px;
+  appearance: none;
+  border: 0;
+  background: #a28d6129;
+}
+.heist-noise progress::-webkit-progress-bar {
+  background: #a28d6129;
+}
+.heist-noise progress::-webkit-progress-value {
+  background: #ca8d63;
+}
+.heist-noise progress::-moz-progress-bar {
+  background: #ca8d63;
+}
+[data-heat] {
+  margin-left: auto;
+}
+.power-off [data-power],
+.has-key [data-key] {
+  color: #c9c696;
+}
+.heist-safe-opening {
+  position: absolute;
+  left: 50%;
+  bottom: 95px;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: min(260px, calc(100% - 32px));
+  padding: 12px 16px;
+  background: #16251ff2;
+  border: 1px solid #baa27188;
+  text-align: center;
+  color: #e0d0a4;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  pointer-events: none;
+}
+.heist-safe-opening progress {
+  display: block;
+  width: 100%;
+  height: 3px;
+  appearance: none;
+  border: 0;
+  margin-top: 9px;
+  background: #a28d6129;
+}
+.heist-safe-opening progress::-webkit-progress-bar {
+  background: #a28d6129;
+}
+.heist-safe-opening progress::-webkit-progress-value {
+  background: #d2bc80;
+}
+.heist-safe-opening progress::-moz-progress-bar {
+  background: #d2bc80;
+}
+@media (max-width: 600px) {
+  .heist-tools {
+    gap: 7px 12px;
+    padding: 8px 12px;
+    font-size: 6px;
+    letter-spacing: 0.04em;
+  }
+  .heist-tools [data-heat] {
+    display: none;
+  }
+  .heist-noise progress {
+    width: 34px;
+  }
+  .heist-safe-opening {
+    font-size: 7px;
+    padding: 10px 12px;
+  }
+}

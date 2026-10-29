@@ -1,34 +1,85 @@
 <!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#171817"><meta name="description" content="Doświadczenie i praktyki Bartłomieja Łaczka.">
-    <title>Doświadczenie — Bartłomiej Łaczek</title><link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <a class="skip-link" href="#main">Przejdź do treści</a>
-    <header class="topbar"><div class="topbar-inner wrap">
-        <a class="wordmark" href="index.html"><span>BŁ</span> / portfolio</a>
-        <nav aria-label="Nawigacja główna"><ul>
-            <li><a href="index.html">O mnie</a></li><li><a href="umiejetnosci.html">Umiejętności</a></li>
-            <li><a href="projekty.html">Projekty</a></li><li><a href="doswiadczenie.html" aria-current="page">Doświadczenie</a></li><li><a href="kontakt.html">Kontakt</a></li>
-        </ul></nav>
-    </div></header>
-    <main id="main" class="wrap">
-        <header class="page-hero"><span class="overline">03 / Praktyka zawodowa</span><h1>Doświadczenie<span>.</span></h1><p>Praktyczne doświadczenie zdobywam, realizując zadania związane z backendem i automatyzacją procesów.</p></header>
-        <section class="content-section" aria-labelledby="experience-title">
-            <div class="section-label"><span class="section-number">01</span><h2 id="experience-title">Praktyki</h2></div>
-            <div class="section-body"><article class="job">
-                <div class="job-meta"><div><h2>Praktykant backend</h2><span class="job-company">Elektris sp. z o.o. sp. k.</span></div><span class="job-date">Wrzesień 2025 · miesiąc</span></div>
-                <p>Przeniosłem workflow n8n do aplikacji backendowej napisanej w Pythonie. Projekt miał usprawnić procesy na linii produkcyjnej, poprawić skalowalność systemu i skrócić czas przetwarzania danych.</p>
-                <p class="tools">Wykorzystane narzędzia: Python, n8n</p>
-            </article></div>
-        </section>
-        <section class="content-section" aria-labelledby="learning-title">
-            <div class="section-label"><span class="section-number">02</span><h2 id="learning-title">Czego się uczę</h2></div>
-            <div class="section-body"><p class="section-lead">Poza praktyką rozwijam umiejętności w technologiach webowych, programowaniu i projektowaniu UI/UX.</p><a href="umiejetnosci.html">Zobacz umiejętności →</a></div>
-        </section>
-    </main>
-    <footer class="wrap"><p>© 2026 Bartłomiej Łaczek</p><p><a href="kontakt.html">Kontakt</a></p></footer>
-</body>
-</html>
+    <html lang="pl">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#f4f3ef" />
+        <meta name="description" content="Praktyki backendowe w Elektris we wrześniu 2025: migracja workflow n8n do aplikacji w Pythonie." />
+        <title>Doświadczenie — Bartłomiej Łaczek</title>
+        <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+        <link rel="stylesheet" href="style.css" />
+
+        <script src="app.js" defer></script>
+      </head>
+      <body data-page="experience">
+        <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false"><filter id="pencil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="2"/></filter><filter id="graphite" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.5 0.08" numOctaves="3" seed="2" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="4"/></filter></svg>
+        <a class="skip-link" href="#main">Przejdź do treści</a>
+        <header class="site-header">
+          <a class="brand" href="index.html">Bartłomiej Łaczek</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+            Menu
+          </button>
+          <nav id="main-nav" class="main-nav" aria-label="Nawigacja główna"><a href="informacja.html">O mnie</a><a href="projekty.html">Projekty</a><a href="doswiadczenie.html" aria-current="page">Doświadczenie</a><a href="umiejetnosci.html">Umiejętności</a><a href="kontakt.html">Kontakt</a></nav>
+        </header>
+        <main id="main" tabindex="-1"><header class="page-hero wrap"><h1>Doświadczenie</h1></header>
+      <article class="experience wrap" aria-labelledby="elektris-title">
+        <header class="experience-head">
+          <div>
+            <h2 id="elektris-title">Elektris</h2>
+            <p>Elektris sp. z o.o. sp. k. — praktyki backendowe</p>
+          </div>
+          <dl class="facts compact">
+            <div>
+              <dt>Kiedy</dt>
+              <dd>Wrzesień 2025</dd>
+            </div>
+            <div>
+              <dt>Czas trwania</dt>
+              <dd>1 miesiąc</dd>
+            </div>
+            <div>
+              <dt>Narzędzia</dt>
+              <dd>Python, n8n</dd>
+            </div>
+          </dl>
+        </header>
+        <figure class="migration paper"><svg class="migration-sketch" viewBox="0 0 640 220" role="img" aria-labelledby="migration-title">
+  <title id="migration-title">Schemat: workflow w n8n przeniesiony do aplikacji w Pythonie</title>
+  <g filter="url(#pencil)">
+    <rect class="sk-face" x="10" y="40" width="170" height="130" rx="3" />
+    <rect class="sk-dark" x="460" y="40" width="170" height="130" rx="3" />
+    <path class="sk-line" d="M196 105 C 260 80, 380 80, 444 105 M 430 96 L 446 106 L 431 116" />
+    <path class="sk-dash" d="M30 72h50m-50 18h90m-90 18h70M480 72h60m-60 18h100m-100 18h80" />
+  </g>
+  <text class="sk-big" x="95" y="152">n8n</text>
+  <text class="sk-big sk-light" x="545" y="152">Python</text>
+  <text class="sk-hand" x="320" y="68" text-anchor="middle">ta sama logika, nowy kod</text>
+  <text class="sk-small" x="95" y="196">workflow</text>
+  <text class="sk-small" x="545" y="196">backend</text>
+</svg></figure>
+        <div class="prose">
+          <h3>Co robiłem</h3>
+          <p>
+            Przenosiłem istniejący workflow z n8n do aplikacji backendowej w Pythonie. Workflow
+            wspierał proces na linii produkcyjnej.
+          </p>
+          <ul class="tags" aria-label="Technologie"><li>Python</li><li>n8n</li><li>Backend</li><li>Automatyzacja</li></ul>
+        </div>
+      </article></main>
+        <nav class="next-page wrap" aria-label="Kolejna strona"><span>Dalej</span><a href="umiejetnosci.html">Umiejętności <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 16h21M18 8l8 8-8 8" stroke="currentColor" stroke-width="1.6"/></svg></a></nav>
+        <footer class="site-footer wrap">
+          <span>Bartłomiej Łaczek, 2026</span>
+          <a href="mailto:bartlomiej.laczek7312@gmail.com">E-mail</a>
+          <a href="https://github.com/Aqayooooo" target="_blank" rel="noopener noreferrer"
+            >GitHub</a
+          ><a class="back-top" href="#main">Do góry ↑</a>
+        </footer>
+        <div class="page-curtain" aria-hidden="true">
+          <svg class="scribble-canvas" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="scribble" d="M-25 -6 L125 -4 L-25 9 L125 14 L-25 27 L125 32 L-25 45 L125 50 L-25 63 L125 68 L-25 81 L125 86 L-25 99 L125 104 L-25 117" pathLength="1" filter="url(#graphite)" />
+          </svg>
+          <span class="curtain-title"></span>
+        </div>
+        <div class="announcement sr-only" role="status" aria-live="polite"></div>
+      </body>
+    </html>
