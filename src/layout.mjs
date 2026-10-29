@@ -9,8 +9,11 @@ export const navigation = [
 export const email = 'bartlomiej.laczek7312@gmail.com';
 export const arrow =
   '<svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 16h21M18 8l8 8-8 8" stroke="currentColor" stroke-width="1.6"/></svg>';
+// zygzak pod przyciskiem, rysuje sie na hover
+const btnScribble =
+  '<span class="btn-scribble" aria-hidden="true"><svg viewBox="0 0 100 40" preserveAspectRatio="none"><path d="M-4 5L104 2L-4 13L104 10L-4 21L104 18L-4 29L104 26L-4 37L104 34L-4 44" pathLength="1" filter="url(#graphite)"/></svg></span>';
 export function button(href, label, extra = '') {
-  return `<a class="pill-button ${extra}" href="${href}"><span class="button-text">${label}</span><span class="button-icon">${arrow}</span></a>`;
+  return `<a class="pill-button ${extra}" href="${href}" data-magnetic>${btnScribble}<span class="button-text">${label}</span><span class="button-icon">${arrow}</span></a>`;
 }
 
 // zygzak do przejscia miedzy stronami

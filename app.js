@@ -388,6 +388,29 @@
     },
     { passive: true },
   );
+  // magnes na przyciskach (tylko mysz)
+  const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+  document.addEventListener(
+    'pointermove',
+    (event) => {
+      if (!finePointer.matches || reducedMotion.matches) return;
+      const btn = event.target.closest('[data-magnetic]');
+      if (!btn) return;
+      const box = btn.getBoundingClientRect();
+      const x = (event.clientX - box.left - box.width / 2) * 0.2;
+      const y = (event.clientY - box.top - box.height / 2) * 0.3;
+      btn.style.translate = `${x.toFixed(1)}px ${y.toFixed(1)}px`;
+    },
+    { passive: true },
+  );
+  document.addEventListener(
+    'pointerout',
+    (event) => {
+      const btn = event.target.closest('[data-magnetic]');
+      if (btn && !btn.contains(event.relatedTarget)) btn.style.translate = '';
+    },
+    { passive: true },
+  );
   reducedMotion.addEventListener('change', () => {
     if (reducedMotion.matches) {
       document.querySelectorAll('.is-observed').forEach((node) => node.classList.add('is-visible'));
