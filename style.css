@@ -36,19 +36,11 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  /* papier milimetrowy: drobna kratka + co 5 kratek mocniejsza linia */
+  /* szkic ołówkiem: linie konstrukcyjne, linijki kodu, kreskowanie */
   background-color: var(--bg);
-  background-image:
-    linear-gradient(#2c5a8c14 1px, transparent 1px),
-    linear-gradient(90deg, #2c5a8c14 1px, transparent 1px),
-    linear-gradient(#22222509 1px, transparent 1px),
-    linear-gradient(90deg, #22222509 1px, transparent 1px);
-  background-size:
-    140px 140px,
-    140px 140px,
-    28px 28px,
-    28px 28px;
-  background-position: -1px -1px;
+  background-image: url('./assets/sketch-bg.svg');
+  background-size: 1600px 1200px;
+  background-position: center top;
   color: var(--ink);
   font: 400 16px/1.65 var(--sans);
   -webkit-font-smoothing: antialiased;
